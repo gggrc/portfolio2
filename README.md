@@ -1,6 +1,5 @@
 # 🌐 Grace Patricia's Portfolio
 
-![Portfolio Preview](./assets/projects/Portfolio.jpg)
 
 Welcome to my portfolio repository!  
 This website was created using **React + TypeScript + Vite** to showcase my **experiences, projects, and skills** as an Informatics student passionate about **technology, design, and software development**.

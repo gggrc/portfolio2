@@ -18,9 +18,9 @@ This website was created using **React + TypeScript + Vite** to showcase my **ex
 
 ## 🛠️ Tech Stack
 
-- **Framework**: React + TypeScript + Vite  
-- **Frontend**: CSS, Responsive Layout  
-- **Backend**: Node.js, Firebase, Supabase, MongoDB, MySQL  
+- **Framework**: Bootstrap
+- **Frontend**: CSS, Js, HTML 
+- **Backend**: Node.js 
 - **Design**: Figma, Canva  
-- **Others**: Git, GitHub, CapCut, MS Office  
+- **Others**: Git, GitHub
 

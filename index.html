@@ -12,7 +12,6 @@
 </head>
 <body>
 
-  <!-- NavBar -->
   <nav class="navbar">
     <ul>
       <li><a href="#home">Home</a></li>
@@ -23,7 +22,7 @@
     </ul>
   </nav>
 
-  <!-- Home -->
+  <!--Home-->
   <section id="home" class="home-section">
     <div class="home-container">
       <div class="home-text">
@@ -46,74 +45,280 @@
     </div>
   </section>
 
-  <!-- Experiences -->
-  <section id="experiences" class="experiences-section" style="background-image: url('assets/experiences/LO.jpg');">
+  <br><br><br>
+
+  <!--Experiences-->
+  <section id="experiences">
     <div class="header-bar">
       <span class="experiences-label">EXPERIENCES</span>
       <div class="circle-number">13</div>
     </div>
-    <div class="cards-container">
-      <div class="experience-card">
-        <img src="assets/experiences/LO.jpg" alt="Liaison Officer">
-        <div class="card-content">
-          <h3>Liaison Officer Marketing UPH</h3>
-          <p class="card-subtitle">Since 2024 until now</p>
-          <p class="card-description">Assisted and coordinated groups of 20-30 students/parents...</p>
-        </div>
-      </div>
-      <!-- Tambahkan card lain sama seperti di React -->
-    </div>
+    <div id="cards-container"></div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="skills-section">
-    <div class="skills-container">
-      <div class="tab-menu">
-        <div class="tab-item active">Backend</div>
-        <div class="tab-item">Frontend</div>
-        <div class="tab-item">Design</div>
-        <div class="tab-item">Others</div>
-      </div>
-      <div class="tab-content">
-        <div class="tech-grid">
-          <div class="tech-card">
-            <img src="assets/skills/nodejs.png" alt="Node.js">
-            <p>Node.js</p>
-          </div>
-          <div class="tech-card">
-            <img src="assets/skills/mysql.png" alt="MySQL">
-            <p>MySQL</p>
-          </div>
-          <!-- Tambah skill lainnya -->
-        </div>
-      </div>
-    </div>
+  <script>
+    const experiences = [
+      {
+        img: "/assets/experiences/LO.jpg",
+        title: "Liaison Officer Marketing UPH",
+        subtitle: "Since 2024 until now",
+        description:
+          "Assisted and coordinated groups of 20-30 students/parents, ensuring a seamless visit through logistics management, campus tours, and delivery of UPH promotional information."
+      },
+      {
+        img: "/assets/experiences/PEMBEBAS2025.jpg",
+        title: "PEMBEBAS UPH 2025",
+        subtitle: "Member of Logistics Division - 2025",
+        description:
+          "Overseeing all equipment, supplies, and venue arrangements, and coordinating with other divisions to ensure timely fulfillment of needs for a smooth event from start to finish."
+      },
+      {
+        img: "/assets/experiences/TEDxUPH2025.jpg",
+        title: "TEDxUPH 2025",
+        subtitle: "Member of Event Division - 2025",
+        description:
+          "Managing the planning, execution, coordination of TEDxUPH 2025 to ensure each session runs smoothly, with speakers, performers, and technical aspects well-arranged."
+      },
+      {
+        img: "/assets/experiences/IDEA2025.jpg",
+        title: "I-DEA 2025",
+        subtitle: "Member of Publication and Registration Division - 2025",
+        description:
+          "Designing and managing event publicity and participant registration through effective communication, organized systems, and timely information."
+      },
+      {
+        img: "/assets/experiences/IGC2025.png",
+        title: "IGC 2025",
+        subtitle: "Coordinator of Publication and Registration Division - 2025",
+        description:
+          "Coordinating event promotion and registration to ensure clear communication, efficient systems, and a smooth participant experience."
+      },
+      {
+        img: "/assets/experiences/ACS.jpg",
+        title: "Informatics Showcase",
+        subtitle: "Presenter - 2025",
+        description:
+          "Delivering a summary of Informatics student projects and providing a detailed explanation of the systems used, from concept to implementation."
+      },
+      {
+        img: "/assets/experiences/KEYSTONE2024.jpg",
+        title: "KEYSTONE 2024",
+        subtitle: "Member of Publication Division - 2024",
+        description:
+          "Managing event publicity, including promotional materials, social media, information distribution, and maintaining a positive public image."
+      },
+      {
+        img: "/assets/experiences/STAGECREW.jpg",
+        title: "Stage Crew UPH Graduation",
+        subtitle: "Since 2024 until 2025",
+        description:
+          "Managing event publicity, including promotional materials, social media, information distribution, and maintaining a positive public image."
+      },
+      {
+        img: "/assets/experiences/FALCON14.jpg",
+        title: "Falcon Project 14",
+        subtitle: "Member of Escaperoom Division - 2024",
+        description:
+          "Responsible for designing the escape room experience, including theme development, layout planning, rule setting, and room setup to create an immersive and engaging environment."
+      },
+      {
+        img: "/assets/experiences/IVILLAGE2024.jpg",
+        title: "I-Village 2024",
+        subtitle: "Volunteer - 2024",
+        description:
+          "Preparing the materials to be presented and guiding participants during the demonstration session to try using the taught application, as an effort to support UMKM in Bencongan Village."
+      },
+      {
+        img: "/assets/experiences/FALCON13.jpg",
+        title: "Falcon Project 13",
+        subtitle: "Coordinator Decoration Division - 2023",
+        description:
+          "Coordinated design and setup of event decor, overseeing theme implementation, spatial arrangement, and ensuring environment aligns with overall concept to create an immersive experience."
+      },
+      {
+        img: "/assets/experiences/IGC2023.jpg",
+        title: "IGC 2023",
+        subtitle: "Member of Publication and Registration Division - 2023",
+        description:
+          "Managed event publicity and registration processes, coordinating communication, promotional materials, and participant enrollment to ensure smooth outreach and seamless attendance."
+      },
+      {
+        img: "/assets/experiences/ITRIP2024.jpg",
+        title: "I-Trip 2023",
+        subtitle: "Coordinator of Logistic Division - 2023",
+        description:
+          "Oversaw logistics coordination for the transport, event, managing equipment, supplies, and timely delivery to ensure smooth operations and support throughout the program."
+      }
+    ];
+
+    const containerExperiences = document.getElementById("cards-container");
+
+    function renderCards() {
+      containerExperiences.innerHTML = "";
+      experiences.forEach(exp => {
+        const card = document.createElement("div");
+        card.className = "experience-card";
+        card.innerHTML = `
+          <img src="${exp.img}" alt="${exp.title}">
+          <h3>${exp.title}</h3>
+          <p>${exp.subtitle}</p>
+          <p>${exp.description}</p>
+        `;
+        containerExperiences.appendChild(card);
+      });
+    }
+    renderCards();
+  </script>
+
+  <!--Skills-->
+  <section id="tech-stacks">
+    <h2>Tech Stacks</h2>
+    <div id="stacks-container"></div>
   </section>
+
+  <script>
+    const techStacks = {
+      Backend: [
+        { name: "Node.js", img: "/assets/skills/nodejs.png" },
+        { name: "mySQL", img: "/assets/skills/mysql.png" },
+        { name: "MongoDB", img: "/assets/skills/mongodb.png" },
+        { name: "Firebase", img: "/assets/skills/firebase.png" },
+        { name: "Supabase", img: "/assets/skills/supabase.png" },
+      ],
+      Frontend: [
+        { name: "Next.js", img: "/assets/skills/nextjs.webp" },
+        { name: "React", img: "/assets/skills/react.png" },
+        { name: "TypeScript", img: "/assets/skills/typescript.webp" },
+        { name: "Vercel", img: "/assets/skills/vercel.webp" },
+      ],
+      Design: [
+        { name: "Figma", img: "/assets/skills/figma.webp" },
+        { name: "Canva", img: "/assets/skills/canva.webp" },
+      ],
+      Others: [
+        { name: "Git", img: "/assets/skills/git.png" },
+        { name: "GitHub", img: "/assets/skills/github.png" },
+        { name: "MS Office", img: "/assets/skills/office.png" },
+        { name: "CapCut", img: "/assets/skills/capcut.webp" },
+      ],
+    };
+
+    const containerSkills = document.getElementById("stacks-container");
+
+    function renderTechStacks() {
+      containerSkills.innerHTML = "";
+
+      Object.keys(techStacks).forEach(category => {
+        const section = document.createElement("div");
+        section.className = "stack-category";
+
+        const title = document.createElement("h3");
+        title.textContent = category;
+        section.appendChild(title);
+
+        const itemsWrapper = document.createElement("div");
+        itemsWrapper.className = "stack-items";
+
+        techStacks[category].forEach(stack => {
+          const item = document.createElement("div");
+          item.className = "stack-item";
+          item.innerHTML = `
+            <img src="${stack.img}" alt="${stack.name}" width="50" height="50">
+            <p>${stack.name}</p>
+          `;
+          itemsWrapper.appendChild(item);
+        });
+
+        section.appendChild(itemsWrapper);
+        containerSkills.appendChild(section);
+      });
+    }
+
+    renderTechStacks();
+  </script>
 
   <!-- Projects -->
-  <section id="projects" class="projects-section">
-    <div class="projects-label">PROJECTS</div>
-    <div class="projects-cards-container">
-      <div class="project-card" style="background-image: url('assets/projects/Portfolio.jpg');">
-        <div class="projects-info-left">
-          <h3>This Portfolio</h3>
-          <p>A personal portfolio website showcasing experiences, projects, and skills.</p>
-        </div>
-        <div class="projects-info-right">
-          <p>Software Developer</p>
-          <h3>Tech Stack</h3>
-          <span class="tech-badge">React</span>
-          <span class="tech-badge">CSS</span>
-          <span class="tech-badge">TypeScript</span>
-          <div class="project-buttons">
-            <a href="https://gracepatricia.vercel.app/" target="_blank" class="btn-demo">Live Demo</a>
-            <a href="https://github.com/gggrc/portfolio" target="_blank" class="btn-code">View Code</a>
-          </div>
-        </div>
-      </div>
-      <!-- Tambahkan project lain -->
-    </div>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div id="projects-container"></div>
   </section>
+
+  <script>
+    const projects = [
+      {
+        title: "Portfolio",
+        description: "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
+        role: "Software Developer",
+        tech: "React, CSS, TypeScript",
+        youtube: "https://gracepatricia.vercel.app/",
+        image: "/assets/projects/Portfolio.jpg",
+        github: "https://github.com/gggrc/portfolio"
+      },
+      {
+        title: "Photobooth Website (Ongoing)",
+        description: "An interactive web application that allows users to take, customize, and download their photos directly from the browser. It features real-time camera access, fun filters, and an easy-to-use interface designed for events and personal use. Built with a responsive layout to ensure smooth performance across devices.",
+        role: "UI/UX Designer and Frontend Developer",
+        tech: "Figma, Node.js, Express",
+        youtube: "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
+        image: "/assets/projects/Photobooth.jpg",
+        github: "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584"
+      },
+      {
+        title: "Prayer Link",
+        description: "PrayerLink is an innovative spiritual app created to strengthen connections through the power of prayer. In a fast-paced world where many feel isolated in their struggles, with PrayerLink, prayer is no longer just a personal act—it becomes a movement of community, linking hearts, hopes, and faith in one platform.",
+        role: "Fullstack Developer",
+        tech: "T3 Stack, Next.js, tRPC, Prisma, Firebase",
+        youtube: "https://youtu.be/YjrGjn3tolU",
+        image: "/assets/projects/PrayerLink.jpg",
+        github: "https://github.com/gggrc/ncfiprayer"
+      },
+      {
+        title: "KeyToHatch",
+        description: "KeytoHatch is a simple, fun, and educational Java-based typing game that challenges your typing speed and accuracy. It features a basic GUI using Java Swing and offers three different game modes for players of all skill levels.",
+        role: "UI/UX Designer and Game Developer",
+        tech: "Aseprite and Java",
+        youtube: "https://youtu.be/-HQPywMF3p8",
+        image: "/assets/projects/KeyToHatch.jpg",
+        github: "https://github.com/gggrc/KeyToHatch"
+      },
+      {
+        title: "Algorithm Visualizer",
+        description: "An HTML visualizer for sorting, searching, and pathfinding with step-by-step animations, speed controls, and responsive UI for learning and comparison.",
+        role: "Fullstack Developer",
+        tech: "HTML",
+        youtube: "https://youtu.be/qS6g4z6CGlQ",
+        image: "/assets/projects/AlgorithmVisualizer.jpg",
+        github: "https://github.com/gggrc/AlgorithmVisualizer"
+      }
+    ];
+
+    const containerProject = document.getElementById("projects-container");
+
+    function renderProjects() {
+      containerProject.innerHTML = "";
+
+      projects.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+
+        card.innerHTML = `
+          <h3>${project.title}</h3>
+          <img src="${project.image}" alt="${project.title}" width="300">
+          <p><strong>Role:</strong> ${project.role}</p>
+          <p><strong>Tech:</strong> ${project.tech}</p>
+          <p>${project.description}</p>
+          <p>
+            <a href="${project.youtube}" target="_blank">Demo</a> | 
+            <a href="${project.github}" target="_blank">GitHub</a>
+          </p>
+        `;
+
+        containerProject.appendChild(card);
+      });
+    }
+
+    renderProjects();
+  </script>
 
   <!-- Contact -->
   <section id="contact" class="contact-section">

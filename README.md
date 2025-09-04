@@ -2,7 +2,7 @@
 
 
 Welcome to my portfolio repository!  
-This website was created using **React + TypeScript + Vite** to showcase my **experiences, projects, and skills** as an Informatics student passionate about **technology, design, and software development**.
+This website was created using **HTML + CSS + JavaScript** to showcase my **experiences, projects, and skills** as an Informatics student passionate about **technology, design, and software development**.
 
 ---
 

@@ -1,0 +1,107 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(50,0,0,0.8)), 
+              url('assets/zombie-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Text Content */
+.home-text {
+  max-width: 600px;
+}
+
+.home-text .name {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.home-text .subname {
+  font-size: 28px;
+  font-weight: 500;
+  color: #f44336; /* Merah elegan */
+  margin-bottom: 20px;
+}
+
+.home-text .description {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Social Icons */
+.social-icons-home a {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: #f44336;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-icons-home a:hover {
+  background: #ff6f61;
+  transform: translateY(-3px);
+}
+
+/* Image */
+.home-image img {
+  width: 320px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(244, 67, 54, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.home-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-text .name {
+    font-size: 38px;
+  }
+
+  .home-text .subname {
+    font-size: 22px;
+  }
+
+  .home-image img {
+    width: 250px;
+  }
+}

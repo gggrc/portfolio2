@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: 'Strippy';
+  src: url('../fonts/Strippy-Regular.otf') format('opentype');
+}
 
 * {
   margin: 0;
@@ -8,8 +11,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(50,0,0,0.8)), 
-              url('assets/zombie-bg.jpg') no-repeat center center/cover;
+  background: radial-gradient(circle at top, #330000, #0a0000);
   color: #fff;
   height: 100vh;
 }

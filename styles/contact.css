@@ -75,11 +75,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* lingkaran lebih besar */
-  height: 50px;
+  width: 40px; /* lingkaran lebih besar */
+  height: 40px;
   border: 2px solid #fff;
   border-radius: 50%;
-  font-size: 22px; /* ukuran icon */
+  font-size: 18px; /* ukuran icon */
   color: #fff;
   text-decoration: none;
   transition: 0.3s;

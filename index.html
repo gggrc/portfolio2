@@ -1,467 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grace Patricia Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/navBar.css">
-  <link rel="stylesheet" href="styles/home.css">
-  <link rel="stylesheet" href="styles/experiences.css">
-  <link rel="stylesheet" href="styles/contact.css">
-  <link rel="stylesheet" href="styles/skills.css">
-  <link rel="stylesheet" href="styles/projects.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grace Patricia Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/navBar.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/experiences.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#experiences">Experiences</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!--Home-->
-  <section id="home" class="home-section">
-    <div class="home-container">
-      <div class="home-text">
-        <h1 class="name">grace</h1>
-        <h2 class="subname">patricia ananta</h2>
-        <p class="description">
-          A dedicated and detail-oriented Informatics student at Universitas Pelita Harapan,
-          passionate about technology, design, and creating impactful solutions through innovation
-          and collaboration.
-        </p>
-        <div class="social-icons-home">
-          <a href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/gggrc" target="_blank">GitHub</a>
-          <a href="https://www.instagram.com/grcc.ceee/" target="_blank">Instagram</a>
+    <!--Home-->
+    <section id="home" class="home-section">
+      <div class="home-container">
+        <div class="home-text">
+          <h1 class="name">grace</h1>
+          <h2 class="subname">patricia ananta</h2>
+          <p class="description">
+            A dedicated and detail-oriented Informatics student at Universitas
+            Pelita Harapan, passionate about technology, design, and creating
+            impactful solutions through innovation and collaboration.
+          </p>
+          <div class="social-icons-home">
+            <a
+              href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/gggrc" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/grcc.ceee/" target="_blank"
+              >Instagram</a
+            >
+          </div>
+        </div>
+        <div class="home-image">
+          <img src="assets/grace1.png" alt="Grace Patricia" />
         </div>
       </div>
-      <div class="home-image">
-        <img src="assets/grace1.png" alt="Grace Patricia">
+    </section>
+
+    <br /><br /><br />
+
+    <!--Experiences-->
+    <section id="experiences">
+      <div class="header-bar">
+        <span class="experiences-label">EXPERIENCES</span>
+        <div class="circle-number">13</div>
       </div>
-    </div>
-  </section>
 
-  <br><br><br>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn prev">&#8249;</button>
+        <div id="cards-container"></div>
+        <button class="carousel-btn next">&#8250;</button>
+      </div>
+    </section>
 
-  <!--Experiences-->
-  <section id="experiences">
-    <div class="header-bar">
-      <span class="experiences-label">EXPERIENCES</span>
-      <div class="circle-number">13</div>
-    </div>
+    <script>
+      const experiences = [
+        {
+          img: "assets/experiences/LO.jpg",
+          title: "Liaison Officer Marketing UPH",
+          subtitle: "Since 2024 until now",
+          description:
+            "Assisted and coordinated groups of 20-30 students/parents, ensuring a seamless visit through logistics management, campus tours, and delivery of UPH promotional information.",
+        },
+        {
+          img: "assets/experiences/PEMBEBAS2025.jpg",
+          title: "PEMBEBAS UPH 2025",
+          subtitle: "Member of Logistics Division - 2025",
+          description:
+            "Overseeing all equipment, supplies, and venue arrangements, and coordinating with other divisions to ensure timely fulfillment of needs for a smooth event from start to finish.",
+        },
+        {
+          img: "assets/experiences/TEDxUPH2025.jpg",
+          title: "TEDxUPH 2025",
+          subtitle: "Member of Event Division - 2025",
+          description:
+            "Managing the planning, execution, coordination of TEDxUPH 2025 to ensure each session runs smoothly, with speakers, performers, and technical aspects well-arranged.",
+        },
+        {
+          img: "assets/experiences/IDEA2025.jpg",
+          title: "I-DEA 2025",
+          subtitle: "Member of Publication and Registration Division - 2025",
+          description:
+            "Designing and managing event publicity and participant registration through effective communication, organized systems, and timely information.",
+        },
+        {
+          img: "assets/experiences/IGC2025.png",
+          title: "IGC 2025",
+          subtitle:
+            "Coordinator of Publication and Registration Division - 2025",
+          description:
+            "Coordinating event promotion and registration to ensure clear communication, efficient systems, and a smooth participant experience.",
+        },
+        {
+          img: "assets/experiences/ACS.jpg",
+          title: "Informatics Showcase",
+          subtitle: "Presenter - 2025",
+          description:
+            "Delivering a summary of Informatics student projects and providing a detailed explanation of the systems used, from concept to implementation.",
+        },
+        {
+          img: "assets/experiences/KEYSTONE2024.jpg",
+          title: "KEYSTONE 2024",
+          subtitle: "Member of Publication Division - 2024",
+          description:
+            "Managing event publicity, including promotional materials, social media, information distribution, and maintaining a positive public image.",
+        },
+        {
+          img: "assets/experiences/STAGECREW.jpg",
+          title: "Stage Crew UPH Graduation",
+          subtitle: "Since 2024 until 2025",
+          description:
+            "Managing event publicity, including promotional materials, social media, information distribution, and maintaining a positive public image.",
+        },
+        {
+          img: "assets/experiences/FALCON14.jpg",
+          title: "Falcon Project 14",
+          subtitle: "Member of Escaperoom Division - 2024",
+          description:
+            "Responsible for designing the escape room experience, including theme development, layout planning, rule setting, and room setup to create an immersive and engaging environment.",
+        },
+        {
+          img: "assets/experiences/IVILLAGE2024.jpg",
+          title: "I-Village 2024",
+          subtitle: "Volunteer - 2024",
+          description:
+            "Preparing the materials to be presented and guiding participants during the demonstration session to try using the taught application, as an effort to support UMKM in Bencongan Village.",
+        },
+        {
+          img: "assets/experiences/FALCON13.jpg",
+          title: "Falcon Project 13",
+          subtitle: "Coordinator Decoration Division - 2023",
+          description:
+            "Coordinated design and setup of event decor, overseeing theme implementation, spatial arrangement, and ensuring environment aligns with overall concept to create an immersive experience.",
+        },
+        {
+          img: "assets/experiences/IGC2023.jpg",
+          title: "IGC 2023",
+          subtitle: "Member of Publication and Registration Division - 2023",
+          description:
+            "Managed event publicity and registration processes, coordinating communication, promotional materials, and participant enrollment to ensure smooth outreach and seamless attendance.",
+        },
+        {
+          img: "assets/experiences/ITRIP2024.jpg",
+          title: "I-Trip 2023",
+          subtitle: "Coordinator of Logistic Division - 2023",
+          description:
+            "Oversaw logistics coordination for the transport, event, managing equipment, supplies, and timely delivery to ensure smooth operations and support throughout the program.",
+        },
+      ];
 
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev">&#8249;</button>
-      <div id="cards-container"></div>
-      <button class="carousel-btn next">&#8250;</button>
-    </div>
-  </section>
+      // ======= CONFIG =======
+      const container = document.getElementById("cards-container");
+      const prevBtn = document.querySelector(".carousel-btn.prev");
+      const nextBtn = document.querySelector(".carousel-btn.next");
 
-  <script>
-    const experiences = [
-      {
-        img: "assets/experiences/LO.jpg",
-        title: "Liaison Officer Marketing UPH",
-        subtitle: "Since 2024 until now",
-        description:
-          "Assisted and coordinated groups of 20-30 students/parents, ensuring a seamless visit through logistics management, campus tours, and delivery of UPH promotional information."
-      },
-      {
-        img: "assets/experiences/PEMBEBAS2025.jpg",
-        title: "PEMBEBAS UPH 2025",
-        subtitle: "Member of Logistics Division - 2025",
-        description:
-          "Overseeing all equipment, supplies, and venue arrangements, and coordinating with other divisions to ensure timely fulfillment of needs for a smooth event from start to finish."
-      },
-      {
-        img: "assets/experiences/TEDxUPH2025.jpg",
-        title: "TEDxUPH 2025",
-        subtitle: "Member of Event Division - 2025",
-        description:
-          "Managing the planning, execution, coordination of TEDxUPH 2025 to ensure each session runs smoothly, with speakers, performers, and technical aspects well-arranged."
-      },
-      {
-        img: "assets/experiences/IDEA2025.jpg",
-        title: "I-DEA 2025",
-        subtitle: "Member of Publication and Registration Division - 2025",
-        description:
-          "Designing and managing event publicity and participant registration through effective communication, organized systems, and timely information."
-      },
-      {
-        img: "assets/experiences/IGC2025.png",
-        title: "IGC 2025",
-        subtitle: "Coordinator of Publication and Registration Division - 2025",
-        description:
-          "Coordinating event promotion and registration to ensure clear communication, efficient systems, and a smooth participant experience."
-      },
-      {
-        img: "assets/experiences/ACS.jpg",
-        title: "Informatics Showcase",
-        subtitle: "Presenter - 2025",
-        description:
-          "Delivering a summary of Informatics student projects and providing a detailed explanation of the systems used, from concept to implementation."
-      },
-      {
-        img: "assets/experiences/KEYSTONE2024.jpg",
-        title: "KEYSTONE 2024",
-        subtitle: "Member of Publication Division - 2024",
-        description:
-          "Managing event publicity, including promotional materials, social media, information distribution, and maintaining a positive public image."
-      },
-      {
-        img: "assets/experiences/STAGECREW.jpg",
-        title: "Stage Crew UPH Graduation",
-        subtitle: "Since 2024 until 2025",
-        description:
-          "Managing event publicity, including promotional materials, social media, information distribution, and maintaining a positive public image."
-      },
-      {
-        img: "assets/experiences/FALCON14.jpg",
-        title: "Falcon Project 14",
-        subtitle: "Member of Escaperoom Division - 2024",
-        description:
-          "Responsible for designing the escape room experience, including theme development, layout planning, rule setting, and room setup to create an immersive and engaging environment."
-      },
-      {
-        img: "assets/experiences/IVILLAGE2024.jpg",
-        title: "I-Village 2024",
-        subtitle: "Volunteer - 2024",
-        description:
-          "Preparing the materials to be presented and guiding participants during the demonstration session to try using the taught application, as an effort to support UMKM in Bencongan Village."
-      },
-      {
-        img: "assets/experiences/FALCON13.jpg",
-        title: "Falcon Project 13",
-        subtitle: "Coordinator Decoration Division - 2023",
-        description:
-          "Coordinated design and setup of event decor, overseeing theme implementation, spatial arrangement, and ensuring environment aligns with overall concept to create an immersive experience."
-      },
-      {
-        img: "assets/experiences/IGC2023.jpg",
-        title: "IGC 2023",
-        subtitle: "Member of Publication and Registration Division - 2023",
-        description:
-          "Managed event publicity and registration processes, coordinating communication, promotional materials, and participant enrollment to ensure smooth outreach and seamless attendance."
-      },
-      {
-        img: "assets/experiences/ITRIP2024.jpg",
-        title: "I-Trip 2023",
-        subtitle: "Coordinator of Logistic Division - 2023",
-        description:
-          "Oversaw logistics coordination for the transport, event, managing equipment, supplies, and timely delivery to ensure smooth operations and support throughout the program."
-      }
-    ];
+      const visibleCards = 3; // jumlah kartu yang terlihat (biasanya ganjil, mis. 3)
+      let clonesCount = Math.min(visibleCards, experiences.length);
+      let cardWidth = 320; // akan dihitung ulang setelah render
+      let currentCenter = 0; // index kartu yang harus berada di tengah (di allSlides)
+      let isAnimating = false;
 
-    // ======= CONFIG =======
-const container = document.getElementById("cards-container");
-const prevBtn = document.querySelector(".carousel-btn.prev");
-const nextBtn = document.querySelector(".carousel-btn.next");
+      // ======= RENDER + CLONE =======
+      function renderCards() {
+        container.innerHTML = "";
 
-const visibleCards = 3; // jumlah kartu yang terlihat (biasanya ganjil, mis. 3)
-let clonesCount = Math.min(visibleCards, experiences.length);
-let cardWidth = 320; // akan dihitung ulang setelah render
-let currentCenter = 0; // index kartu yang harus berada di tengah (di allSlides)
-let isAnimating = false;
+        clonesCount = Math.min(visibleCards, experiences.length);
+        const firstClones = experiences
+          .slice(0, clonesCount)
+          .map((e) => ({ ...e, clone: true }));
+        const lastClones = experiences
+          .slice(-clonesCount)
+          .map((e) => ({ ...e, clone: true }));
+        const allSlides = [...lastClones, ...experiences, ...firstClones];
 
-// ======= RENDER + CLONE =======
-function renderCards() {
-  container.innerHTML = "";
-
-  clonesCount = Math.min(visibleCards, experiences.length);
-  const firstClones = experiences.slice(0, clonesCount).map(e => ({ ...e, clone: true }));
-  const lastClones = experiences.slice(-clonesCount).map(e => ({ ...e, clone: true }));
-  const allSlides = [...lastClones, ...experiences, ...firstClones];
-
-  allSlides.forEach((exp, idx) => {
-    const card = document.createElement("div");
-    card.className = "experience-card";
-    card.dataset.idx = idx;
-    card.innerHTML = `
+        allSlides.forEach((exp, idx) => {
+          const card = document.createElement("div");
+          card.className = "experience-card";
+          card.dataset.idx = idx;
+          card.innerHTML = `
       <img src="${exp.img}" alt="${exp.title}">
       <h3>${exp.title}</h3>
       <p class="subtitle">${exp.subtitle || ""}</p>
       <p class="desc">${exp.description || ""}</p>
     `;
 
-    card.addEventListener("click", () => {
-      if (isAnimating) return;
-      // klik sebuah kartu → jadikan kartu itu sebagai center
-      currentCenter = idx;
-      snapToIndex();
-    });
+          card.addEventListener("click", () => {
+            if (isAnimating) return;
+            // klik sebuah kartu → jadikan kartu itu sebagai center
+            currentCenter = idx;
+            snapToIndex();
+          });
 
-    container.appendChild(card);
-  });
+          container.appendChild(card);
+        });
 
-  // setelah render, hitung ukuran 'step' (termasuk gap) secara akurat
-  computeCardWidth();
-  // set default center ke kartu pertama ORI (bukan clone): indeks = clonesCount
-  currentCenter = clonesCount;
-  updateCarousel(false);
-}
+        // setelah render, hitung ukuran 'step' (termasuk gap) secara akurat
+        computeCardWidth();
+        // set default center ke kartu pertama ORI (bukan clone): indeks = clonesCount
+        currentCenter = clonesCount;
+        updateCarousel(false);
+      }
 
-// ======= HELPERS =======
-function cards() {
-  return Array.from(container.querySelectorAll(".experience-card"));
-}
+      // ======= HELPERS =======
+      function cards() {
+        return Array.from(container.querySelectorAll(".experience-card"));
+      }
 
-function computeCardWidth() {
-  const c = cards();
-  if (c.length >= 2) {
-    const r0 = c[0].getBoundingClientRect();
-    const r1 = c[1].getBoundingClientRect();
-    cardWidth = Math.round(r1.left - r0.left);
-    if (!cardWidth || cardWidth <= 0) cardWidth = c[0].offsetWidth;
-  } else if (c.length === 1) {
-    cardWidth = c[0].offsetWidth;
-  }
-}
+      function computeCardWidth() {
+        const c = cards();
+        if (c.length >= 2) {
+          const r0 = c[0].getBoundingClientRect();
+          const r1 = c[1].getBoundingClientRect();
+          cardWidth = Math.round(r1.left - r0.left);
+          if (!cardWidth || cardWidth <= 0) cardWidth = c[0].offsetWidth;
+        } else if (c.length === 1) {
+          cardWidth = c[0].offsetWidth;
+        }
+      }
 
-function updateActiveCard() {
-  const all = cards();
-  all.forEach(card => card.classList.remove("active"));
+      function updateActiveCard() {
+        const all = cards();
+        all.forEach((card) => card.classList.remove("active"));
 
-  const centerCard = all[currentCenter];
-  if (centerCard) centerCard.classList.add("active");
-}
+        const centerCard = all[currentCenter];
+        if (centerCard) centerCard.classList.add("active");
+      }
 
-function updateCarousel(animate = true) {
-  // untuk menempatkan currentCenter di tengah viewport:
-  const leftIndex = currentCenter - Math.floor(visibleCards / 2);
-  const offset = leftIndex * cardWidth;
-  container.style.transition = animate ? "transform 0.5s ease" : "none";
-  container.style.transform = `translateX(-${offset}px)`;
-  updateActiveCard();
-}
+      function updateCarousel(animate = true) {
+        // untuk menempatkan currentCenter di tengah viewport:
+        const leftIndex = currentCenter - Math.floor(visibleCards / 2);
+        const offset = leftIndex * cardWidth;
+        container.style.transition = animate ? "transform 0.5s ease" : "none";
+        container.style.transform = `translateX(-${offset}px)`;
+        updateActiveCard();
+      }
 
-// dipanggil saat ingin bergerak: dengan animasi dan protection
-function snapToIndex() {
-  if (isAnimating) return;
-  isAnimating = true;
-  // disable tombol sementara
-  setButtonsDisabled(true);
+      // dipanggil saat ingin bergerak: dengan animasi dan protection
+      function snapToIndex() {
+        if (isAnimating) return;
+        isAnimating = true;
+        // disable tombol sementara
+        setButtonsDisabled(true);
 
-  updateCarousel(true);
-  container.addEventListener(
-    "transitionend",
-    () => {
-      handleInfiniteLoop(); // sesuaikan index jika sekarang pada clone
-      isAnimating = false;
-      setButtonsDisabled(false);
-    },
-    { once: true }
-  );
-}
+        updateCarousel(true);
+        container.addEventListener(
+          "transitionend",
+          () => {
+            handleInfiniteLoop(); // sesuaikan index jika sekarang pada clone
+            isAnimating = false;
+            setButtonsDisabled(false);
+          },
+          { once: true },
+        );
+      }
 
-function handleInfiniteLoop() {
-  const originalsStart = clonesCount;
-  const originalsEnd = clonesCount + experiences.length - 1;
+      function handleInfiniteLoop() {
+        const originalsStart = clonesCount;
+        const originalsEnd = clonesCount + experiences.length - 1;
 
-  // pindahkan currentCenter kembali ke range original jika masuk area clone
-  while (currentCenter > originalsEnd) {
-    currentCenter -= experiences.length;
-  }
-  while (currentCenter < originalsStart) {
-    currentCenter += experiences.length;
-  }
+        // pindahkan currentCenter kembali ke range original jika masuk area clone
+        while (currentCenter > originalsEnd) {
+          currentCenter -= experiences.length;
+        }
+        while (currentCenter < originalsStart) {
+          currentCenter += experiences.length;
+        }
 
-  // reposition tanpa animasi agar tak terlihat pergantian clone
-  updateCarousel(false);
-}
+        // reposition tanpa animasi agar tak terlihat pergantian clone
+        updateCarousel(false);
+      }
 
-function setButtonsDisabled(disabled) {
-  if (prevBtn) prevBtn.disabled = disabled;
-  if (nextBtn) nextBtn.disabled = disabled;
-}
+      function setButtonsDisabled(disabled) {
+        if (prevBtn) prevBtn.disabled = disabled;
+        if (nextBtn) nextBtn.disabled = disabled;
+      }
 
-// ======= CONTROLS =======
-function attachControls() {
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      if (isAnimating) return;
-      currentCenter += 1;
-      snapToIndex();
-    });
-  }
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      if (isAnimating) return;
-      currentCenter -= 1;
-      snapToIndex();
-    });
-  }
+      // ======= CONTROLS =======
+      function attachControls() {
+        if (nextBtn) {
+          nextBtn.addEventListener("click", () => {
+            if (isAnimating) return;
+            currentCenter += 1;
+            snapToIndex();
+          });
+        }
+        if (prevBtn) {
+          prevBtn.addEventListener("click", () => {
+            if (isAnimating) return;
+            currentCenter -= 1;
+            snapToIndex();
+          });
+        }
 
-  // Touch / drag / keyboard bisa ditambahkan di sini jika perlu
-}
+        // Touch / drag / keyboard bisa ditambahkan di sini jika perlu
+      }
 
-// resize → recompute cardWidth dan pos tanpa animasi
-window.addEventListener("resize", () => {
-  computeCardWidth();
-  updateCarousel(false);
-});
+      // resize → recompute cardWidth dan pos tanpa animasi
+      window.addEventListener("resize", () => {
+        computeCardWidth();
+        updateCarousel(false);
+      });
 
-// ======= INIT =======
-renderCards();
-attachControls();
+      // ======= INIT =======
+      renderCards();
+      attachControls();
+    </script>
 
-  </script>
+    <!--Skills-->
+    <section id="skills" class="tech-stacks">
+      <h2>Technologies</h2>
+      <div id="stacks-container"></div>
+    </section>
 
-  <!--Skills-->
-  <section id= "skills"  class="tech-stacks">
-    <h2>Tech Stacks</h2>
-    <div id="stacks-container"></div>
-  </section>
+    <script>
+      const techStacks = {
+        Backend: [
+          { name: "Node.js", img: "assets/skills/nodejs.png" },
+          { name: "mySQL", img: "assets/skills/mysql.png" },
+          { name: "MongoDB", img: "assets/skills/mongodb.png" },
+          { name: "Firebase", img: "assets/skills/firebase.png" },
+          { name: "Supabase", img: "assets/skills/supabase.png" },
+        ],
+        Frontend: [
+          { name: "Next.js", img: "assets/skills/nextjs.webp" },
+          { name: "React", img: "assets/skills/react.png" },
+          { name: "TypeScript", img: "assets/skills/typescript.webp" },
+          { name: "Vercel", img: "assets/skills/vercel.webp" },
+        ],
+        Design: [
+          { name: "Figma", img: "assets/skills/figma.webp" },
+          { name: "Canva", img: "assets/skills/canva.webp" },
+        ],
+        Others: [
+          { name: "Git", img: "assets/skills/git.png" },
+          { name: "GitHub", img: "assets/skills/github.png" },
+          { name: "MS Office", img: "assets/skills/office.png" },
+          { name: "CapCut", img: "assets/skills/capcut.webp" },
+        ],
+      };
 
-  <script>
-    const techStacks = {
-      Backend: [
-        { name: "Node.js", img: "assets/skills/nodejs.png" },
-        { name: "mySQL", img: "assets/skills/mysql.png" },
-        { name: "MongoDB", img: "assets/skills/mongodb.png" },
-        { name: "Firebase", img: "assets/skills/firebase.png" },
-        { name: "Supabase", img: "assets/skills/supabase.png" },
-      ],
-      Frontend: [
-        { name: "Next.js", img: "assets/skills/nextjs.webp" },
-        { name: "React", img: "assets/skills/react.png" },
-        { name: "TypeScript", img: "assets/skills/typescript.webp" },
-        { name: "Vercel", img: "assets/skills/vercel.webp" },
-      ],
-      Design: [
-        { name: "Figma", img: "assets/skills/figma.webp" },
-        { name: "Canva", img: "assets/skills/canva.webp" },
-      ],
-      Others: [
-        { name: "Git", img: "assets/skills/git.png" },
-        { name: "GitHub", img: "assets/skills/github.png" },
-        { name: "MS Office", img: "assets/skills/office.png" },
-        { name: "CapCut", img: "assets/skills/capcut.webp" },
-      ],
-    };
-
-    const containerSkills = document.getElementById("stacks-container");
-
-    function renderTechStacks() {
-      containerSkills.innerHTML = "";
-
-      Object.keys(techStacks).forEach(category => {
-        const section = document.createElement("div");
-        section.className = "stack-category";
+      // Render stacks
+      const stacksContainer = document.getElementById("stacks-container");
+      for (const category in techStacks) {
+        const catDiv = document.createElement("div");
+        catDiv.classList.add("category");
 
         const title = document.createElement("h3");
         title.textContent = category;
-        section.appendChild(title);
+        catDiv.appendChild(title);
 
-        const itemsWrapper = document.createElement("div");
-        itemsWrapper.className = "stack-items";
+        const grid = document.createElement("div");
+        grid.classList.add("stacks-grid");
 
-        techStacks[category].forEach(stack => {
-          const item = document.createElement("div");
-          item.className = "stack-item";
-          item.innerHTML = `
-            <img src="${stack.img}" alt="${stack.name}" width="50" height="50">
-            <p>${stack.name}</p>
-          `;
-          itemsWrapper.appendChild(item);
+        techStacks[category].forEach((stack) => {
+          const div = document.createElement("div");
+          div.classList.add("stack");
+          div.innerHTML = `<img src="${stack.img}" alt="${stack.name}"><span>${stack.name}</span>`;
+          grid.appendChild(div);
         });
 
-        section.appendChild(itemsWrapper);
-        containerSkills.appendChild(section);
-      });
-    }
-
-    renderTechStacks();
-  </script>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div id="projects-container"></div>
-  </section>
-
-  <script>
-    const projects = [
-    {
-        title: "Photobooth Website (Ongoing)",
-        description: "An interactive web application that allows users to take, customize, and download their photos directly from the browser. It features real-time camera access, fun filters, and an easy-to-use interface designed for events and personal use. Built with a responsive layout to ensure smooth performance across devices.",
-        role: "UI/UX Designer and Frontend Developer",
-        tech: "Figma, Node.js, Express",
-        youtube: "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
-        image: "assets/projects/Photobooth.jpg",
-        github: "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584"
-      },
-      {
-        title: "Website Database GKI Karawaci",
-        description: "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
-        role: "Fullstack Developer",
-        tech: "React, TypeScript, Supabase, Next.js, Node.js",
-        youtube: "https://gkikarawaci.vercel.app/",
-        image: "assets/projects/DatabaseGKIKarawaci.png",
-        github: "https://github.com/gggrc/gkikarawaci"
-      },
-      {
-        title: "Portfolio",
-        description: "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
-        role: "Software Developer",
-        tech: "React, CSS, TypeScript",
-        youtube: "https://gracepatricia.vercel.app/",
-        image: "assets/projects/Portfolio.jpg",
-        github: "https://github.com/gggrc/portfolio"
-      },
-      {
-        title: "Prayer Link",
-        description: "PrayerLink is an innovative spiritual app created to strengthen connections through the power of prayer. In a fast-paced world where many feel isolated in their struggles, with PrayerLink, prayer is no longer just a personal act—it becomes a movement of community, linking hearts, hopes, and faith in one platform.",
-        role: "Fullstack Developer",
-        tech: "T3 Stack, Next.js, tRPC, Prisma, Firebase",
-        youtube: "https://youtu.be/YjrGjn3tolU",
-        image: "assets/projects/PrayerLink.jpg",
-        github: "https://github.com/gggrc/ncfiprayer"
-      },
-      {
-        title: "KeyToHatch",
-        description: "KeytoHatch is a simple, fun, and educational Java-based typing game that challenges your typing speed and accuracy. It features a basic GUI using Java Swing and offers three different game modes for players of all skill levels.",
-        role: "UI/UX Designer and Game Developer",
-        tech: "Aseprite and Java",
-        youtube: "https://youtu.be/-HQPywMF3p8",
-        image: "assets/projects/KeyToHatch.jpg",
-        github: "https://github.com/gggrc/KeyToHatch"
-      },
-      {
-        title: "Algorithm Visualizer",
-        description: "An HTML visualizer for sorting, searching, and pathfinding with step-by-step animations, speed controls, and responsive UI for learning and comparison.",
-        role: "Developer",
-        tech: "HTML",
-        youtube: "https://youtu.be/qS6g4z6CGlQ",
-        image: "assets/projects/AlgorithmVisualizer.jpg",
-        github: "https://github.com/gggrc/AlgorithmVisualizer"
-      },
-      {
-        title: "Exercise Flexbox",
-        description: "Learning Flexbox by building a responsive webpage layout with HTML and CSS, demonstrating various Flexbox properties and techniques for modern web design.",
-        role: "Developer",
-        tech: "HTML, CSS",
-        youtube: "https://gggrc.github.io/exerciseFlex/",
-        image: "assets/projects/flexBoxExercise.png",
-        github: "https://github.com/gggrc/exerciseFlex"
+        catDiv.appendChild(grid);
+        stacksContainer.appendChild(catDiv);
       }
-    ];
 
-    const containerProject = document.getElementById("projects-container");
+      // Efek tilt saat hover
+      document.querySelectorAll(".stack").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * 10;
+          const rotateY = ((x - centerX) / centerX) * 10;
 
-    function renderProjects() {
-      containerProject.innerHTML = "";
+          card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+          card.style.boxShadow = `${-rotateY}px ${rotateX}px 15px rgba(0,0,0,0.4)`;
+        });
 
-      projects.forEach(project => {
-        const card = document.createElement("div");
-        card.className = "project-card";
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+          card.style.boxShadow = "none";
+        });
+      });
 
-        card.innerHTML = `
+      // background 3D dots
+      const bg3D = document.querySelector(".bg-3d");
+      for (let i = 0; i < 30; i++) {
+        const dot = document.createElement("span");
+        dot.style.transform = `rotateX(${Math.random() * 360}deg) rotateY(${Math.random() * 360}deg) translateZ(${Math.random() * 300}px)`;
+        bg3D.appendChild(dot);
+      }
+
+      document.addEventListener("mousemove", (e) => {
+        const x = (window.innerWidth / 2 - e.clientX) / 50;
+        const y = (window.innerHeight / 2 - e.clientY) / 50;
+        bg3D.style.transform = `translate(-50%, -50%) rotateX(${y}deg) rotateY(${x}deg)`;
+      });
+    </script>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div id="projects-container"></div>
+    </section>
+
+    <script>
+      const projects = [
+        {
+          title: "Photobooth Website (Ongoing)",
+          description:
+            "An interactive web application that allows users to take, customize, and download their photos directly from the browser. It features real-time camera access, fun filters, and an easy-to-use interface designed for events and personal use. Built with a responsive layout to ensure smooth performance across devices.",
+          role: "UI/UX Designer and Frontend Developer",
+          tech: "Figma, Node.js, Express",
+          youtube:
+            "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
+          image: "assets/projects/Photobooth.jpg",
+          github:
+            "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
+        },
+        {
+          title: "Website Database GKI Karawaci",
+          description:
+            "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
+          role: "Fullstack Developer",
+          tech: "React, TypeScript, Supabase, Next.js, Node.js",
+          youtube: "https://gkikarawaci.vercel.app/",
+          image: "assets/projects/DatabaseGKIKarawaci.png",
+          github: "https://github.com/gggrc/gkikarawaci",
+        },
+        {
+          title: "Portfolio",
+          description:
+            "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
+          role: "Software Developer",
+          tech: "React, CSS, TypeScript",
+          youtube: "https://gracepatricia.vercel.app/",
+          image: "assets/projects/Portfolio.jpg",
+          github: "https://github.com/gggrc/portfolio",
+        },
+        {
+          title: "Prayer Link",
+          description:
+            "PrayerLink is an innovative spiritual app created to strengthen connections through the power of prayer. In a fast-paced world where many feel isolated in their struggles, with PrayerLink, prayer is no longer just a personal act—it becomes a movement of community, linking hearts, hopes, and faith in one platform.",
+          role: "Fullstack Developer",
+          tech: "T3 Stack, Next.js, tRPC, Prisma, Firebase",
+          youtube: "https://youtu.be/YjrGjn3tolU",
+          image: "assets/projects/PrayerLink.jpg",
+          github: "https://github.com/gggrc/ncfiprayer",
+        },
+        {
+          title: "KeyToHatch",
+          description:
+            "KeytoHatch is a simple, fun, and educational Java-based typing game that challenges your typing speed and accuracy. It features a basic GUI using Java Swing and offers three different game modes for players of all skill levels.",
+          role: "UI/UX Designer and Game Developer",
+          tech: "Aseprite and Java",
+          youtube: "https://youtu.be/-HQPywMF3p8",
+          image: "assets/projects/KeyToHatch.jpg",
+          github: "https://github.com/gggrc/KeyToHatch",
+        },
+        {
+          title: "Algorithm Visualizer",
+          description:
+            "An HTML visualizer for sorting, searching, and pathfinding with step-by-step animations, speed controls, and responsive UI for learning and comparison.",
+          role: "Developer",
+          tech: "HTML",
+          youtube: "https://youtu.be/qS6g4z6CGlQ",
+          image: "assets/projects/AlgorithmVisualizer.jpg",
+          github: "https://github.com/gggrc/AlgorithmVisualizer",
+        },
+        {
+          title: "Exercise Flexbox",
+          description:
+            "Learning Flexbox by building a responsive webpage layout with HTML and CSS, demonstrating various Flexbox properties and techniques for modern web design.",
+          role: "Developer",
+          tech: "HTML, CSS",
+          youtube: "https://gggrc.github.io/exerciseFlex/",
+          image: "assets/projects/flexBoxExercise.png",
+          github: "https://github.com/gggrc/exerciseFlex",
+        },
+      ];
+
+      const containerProject = document.getElementById("projects-container");
+
+      function renderProjects() {
+        containerProject.innerHTML = "";
+
+        projects.forEach((project) => {
+          const card = document.createElement("div");
+          card.className = "project-card";
+
+          card.innerHTML = `
           <h3>${project.title}</h3>
           <img src="${project.image}" alt="${project.title}" width="300">
           <p><strong>Role:</strong> ${project.role}</p>
@@ -473,38 +524,133 @@ attachControls();
           </p>
         `;
 
-        containerProject.appendChild(card);
-      });
-    }
+          containerProject.appendChild(card);
+        });
+      }
 
-    renderProjects();
-  </script>
+      renderProjects();
+    </script>
 
-  <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <div class="contact-container">
-      <div class="contact-left">
-        <h2 class="contact-title">Let's Connect</h2>
-        <p class="contact-subtitle">Whether it's about your project or just a friendly hello.</p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            <p class="contact-text">gracepatricia1125@gmail.com</p>
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <!-- Left: Info -->
+        <div class="contact-info-box">
+          <h4 class="contact-subtitle">GET IN TOUCH</h4>
+          <h2 class="contact-title">Contact.</h2>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <p class="contact-text">gracepatricia1125@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <p class="contact-text">Banten, Indonesia</p>
+            </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-label">Location</span>
-            <p class="contact-text">Banten, Indonesia</p>
+
+          <p class="contact-with-me">Contact with me:</p>
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/gggrc" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/grcc.ceee/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
         </div>
-        <p class="contact-with-me">Contact with me:</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/gggrc" target="_blank">GitHub</a>
-          <a href="https://www.instagram.com/grcc.ceee/" target="_blank">Instagram</a>
+
+        <!-- Right: Globe -->
+        <div class="contact-visual">
+          <div id="globe-container"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      // Setup scene
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true,
+      });
+      const globeContainer = document.getElementById("globe-container");
+      renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+      globeContainer.appendChild(renderer.domElement);
+
+      // Buat globe
+      const geometry = new THREE.SphereGeometry(2, 32, 32);
+      const material = new THREE.MeshStandardMaterial({
+        color: 0x1e40af,
+        wireframe: true,
+      });
+      const sphere = new THREE.Mesh(geometry, material);
+      scene.add(sphere);
+
+      // Pencahayaan
+      const light = new THREE.PointLight(0xffffff, 1);
+      light.position.set(5, 5, 5);
+      scene.add(light);
+
+      camera.position.z = 5;
+
+      // Variabel rotasi target
+      let targetX = 0;
+      let targetY = 0;
+      let isHovering = false;
+
+      // Aktifkan hanya saat hover
+      globeContainer.addEventListener("mouseenter", () => {
+        isHovering = true;
+      });
+
+      globeContainer.addEventListener("mouseleave", () => {
+        isHovering = false;
+      });
+
+      // Event listener mouse
+      globeContainer.addEventListener("mousemove", (event) => {
+        if (!isHovering) return;
+        const rect = globeContainer.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        targetX = x * 0.5;
+        targetY = y * 0.5;
+      });
+
+      // Animasi
+      function animate() {
+        requestAnimationFrame(animate);
+
+        if (isHovering) {
+          // Ikuti kursor dengan smooth
+          sphere.rotation.y += (targetX - sphere.rotation.y) * 0.05;
+          sphere.rotation.x += (targetY - sphere.rotation.x) * 0.05;
+        } else {
+          // Idle rotation pelan saat tidak hover
+          sphere.rotation.y += 0.002;
+        }
+
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      // Responsif
+      window.addEventListener("resize", () => {
+        const size = globeContainer.getBoundingClientRect();
+        camera.aspect = size.width / size.height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(size.width, size.height);
+      });
+    </script>
+  </body>
 </html>

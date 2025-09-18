@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Strippy';
-  src: url('../fonts/Strippy-Regular.otf') format('opentype');
+  font-family: "Strippy";
+  src: url("../fonts/Strippy-Regular.otf") format("opentype");
 }
 
 * {
@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom,#0a0000,  #330000, #330000, #0a0000);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #0a0000, #330000, #330000, #0a0000);
   color: #fff;
   height: 100vh;
 }

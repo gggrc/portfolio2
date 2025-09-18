@@ -1,87 +1,87 @@
-@font-face {
-  font-family: "Mitr";
-  src: url("../fonts/Mitr-Light.ttf") format("opentype");
-}
+    @font-face {
+      font-family: 'Mitr';
+      src: url('../fonts/Mitr-Light.ttf') format('opentype');
+    }
 
-/* ===== Footer Utama ===== */
-.footer {
-  background-color: #0c160d; /* warna hitam kehijauan */
-  border-top: 3px solid #edda96; /* garis tipis kuning pastel */
-  padding: 1.5rem 6rem;
-  color: #edda96;
-}
+    /* ===== Footer Utama ===== */
+    .footer {
+      background-color: #0C160D; /* warna hitam kehijauan */
+      border-top: 3px solid #EDDA96; /* garis tipis kuning pastel */
+      padding: 1.5rem 6rem;
+      color: #EDDA96;
+    }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-.footer-left {
-  max-width: 70%;
-}
+    .footer-left {
+      max-width: 70%;
+    }
 
-.footer-title {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
+    .footer-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+      
+      letter-spacing: 1px;
+    }
 
-  letter-spacing: 1px;
-}
+    .footer-text {
+      font-size: 0.8rem;
+      margin: 0.1rem 0;
+      font-family: "Mitr", sans-serif;
+    }
 
-.footer-text {
-  font-size: 0.8rem;
-  margin: 0.1rem 0;
-  font-family: "Mitr", sans-serif;
-}
+    .footer-right {
+      display: flex;
+      gap: 1rem;
+    }
 
-.footer-right {
-  display: flex;
-  gap: 1rem;
-}
+    .icon-circle-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #EDDA96; /* outline tipis */
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      color: #EDDA96;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
 
-.icon-circle-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #edda96; /* outline tipis */
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: #edda96;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
+    .icon-circle-footer i {
+      font-size: 1rem;
+    }
 
-.icon-circle-footer i {
-  font-size: 1rem;
-}
+    .icon-circle-footer:hover {
+      background-color: #EDDA96;
+      color: #0b130b;
+    }
 
-.icon-circle-footer:hover {
-  background-color: #edda96;
-  color: #0b130b;
-}
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .footer {
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .footer {
-    padding: 1.5rem 2rem;
-    text-align: center;
-  }
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
+      .footer-left {
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
 
-  .footer-left {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .footer-right {
-    justify-content: center;
-  }
-}
+      .footer-right {
+        justify-content: center;
+      }
+    }

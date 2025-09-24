@@ -202,70 +202,48 @@ const techStacks = {
   ],
 };
 
-const stacksContainer = document.getElementById("stacks-container");
-if (stacksContainer) {
-  for (const category in techStacks) {
-    const catDiv = document.createElement("div");
-    catDiv.classList.add("category");
+const tabs = document.querySelectorAll('.tab-item');
+  const techGrid = document.getElementById('tech-grid');
+  let activeTab = "Backend";
 
-    const title = document.createElement("h3");
-    title.textContent = category;
-    catDiv.appendChild(title);
-
-    const grid = document.createElement("div");
-    grid.classList.add("stacks-grid");
-
-    techStacks[category].forEach((stack) => {
-      const div = document.createElement("div");
-      div.classList.add("stack");
-      div.innerHTML = `<img src="${stack.img}" alt="${stack.name}"><span>${stack.name}</span>`;
-      grid.appendChild(div);
+  function renderTech(tab) {
+    techGrid.innerHTML = '';
+    techStacks[tab].forEach(tech => {
+      const card = document.createElement('div');
+      card.className = 'tech-card';
+      card.innerHTML = `
+        <img src="${tech.img}" alt="${tech.name}">
+        <p>${tech.name}</p>
+      `;
+      techGrid.appendChild(card);
     });
-
-    catDiv.appendChild(grid);
-    stacksContainer.appendChild(catDiv);
   }
 
-  // Tilt effect
-  document.querySelectorAll(".stack").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * 10;
-      const rotateY = ((x - centerX) / centerX) * 10;
-
-      card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-      card.style.boxShadow = `${-rotateY}px ${rotateX}px 15px rgba(0,0,0,0.4)`;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "rotateX(0) rotateY(0) scale(1)";
-      card.style.boxShadow = "none";
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeTab = tab.dataset.tab;
+      renderTech(activeTab);
     });
   });
-}
 
-// Background 3D dots
-const bg3D = document.querySelector(".bg-3d");
-if (bg3D) {
-  for (let i = 0; i < 30; i++) {
-    const dot = document.createElement("span");
-    dot.style.transform = `rotateX(${Math.random() * 360}deg) rotateY(${Math.random() * 360}deg) translateZ(${Math.random() * 300}px)`;
-    bg3D.appendChild(dot);
-  }
-
-  document.addEventListener("mousemove", (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 50;
-    const y = (window.innerHeight / 2 - e.clientY) / 50;
-    bg3D.style.transform = `translate(-50%, -50%) rotateX(${y}deg) rotateY(${x}deg)`;
-  });
-}
-
+  // Render awal
+  renderTech(activeTab);
 //Project
 const projects = [
+  {
+          title: "This Portfolio",
+          description:
+            "A modern portfolio website highlighting my projects, skills, and experiences, designed for responsiveness, smooth animations, and seamless user navigation.",
+          role: "Developer",
+          tech: "CSS, HTML, JS, Node.js",
+          youtube:
+            "https://gggrc.github.io/portfolio2/",
+          image: "assets/projects/ThisPortfolio.png",
+          github:
+            "https://github.com/gggrc/portfolio2",
+        },
         {
           title: "Photobooth Website (Ongoing)",
           description:

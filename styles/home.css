@@ -1,3 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #a8cedd; /* warna langit biru */
+  position: relative;
+}
+
+/* Awan normal dengan shading */
+.cloud {
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Tambahkan pseudo-element untuk bentuk awan */
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.9;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+}
+
+/* Contoh awan dari kiri */
+.cloud1 {
+  top: 50px;
+  left: -150px;
+  width: 120px;
+  height: 70px;
+  animation: moveRight 60s linear infinite;
+}
+.cloud1::before { width: 80px; height: 80px; top: -20px; left: 20px; }
+.cloud1::after  { width: 60px; height: 60px; top: 10px; left: 70px; }
+
+.cloud3 {
+  top: 150px;
+  left: -120px;
+  width: 100px;
+  height: 60px;
+  animation: moveRight 50s linear infinite;
+}
+.cloud3::before { width: 70px; height: 70px; top: -20px; left: 15px; }
+.cloud3::after  { width: 50px; height: 50px; top: 10px; left: 50px; }
+
+/* Contoh awan dari kanan */
+.cloud2 {
+  top: 200px;
+  left: 100vw;
+  width: 140px;
+  height: 80px;
+  animation: moveLeft 70s linear infinite;
+}
+.cloud2::before { width: 90px; height: 90px; top: -30px; left: 30px; }
+.cloud2::after  { width: 70px; height: 70px; top: 20px; left: 80px; }
+
+.cloud4 {
+  top: 300px;
+  left: 100vw;
+  width: 110px;
+  height: 70px;
+  animation: moveLeft 80s linear infinite;
+}
+.cloud4::before { width: 80px; height: 80px; top: -20px; left: 20px; }
+.cloud4::after  { width: 60px; height: 60px; top: 10px; left: 50px; }
+
+/* Animasi */
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+@keyframes moveLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-120vw); }
+}
+
+
+
 .profile-card {
   width: 85%;
   height: 78vh;
@@ -7,7 +92,7 @@
   border: 4px solid #680c24;         
   outline: 2px solid #f6b3bc;        
   border-radius: 6px;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 6px 6px 0px #000;
 }
 
 .card-header {
@@ -48,7 +133,9 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-left: 5px solid #f6b3bc; /* garis pemisah antara kiri-kanan */
+  border-left: 5px solid #f6b3bc; 
+  margin-bottom: 1.1%;;/* garis pemisah antara kiri-kanan */
+  z-index: 1;
 }
 
 .info {

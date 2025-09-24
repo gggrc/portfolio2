@@ -1,3 +1,36 @@
+//navBar
+function updateDateTime() {
+    const now = new Date();
+
+    const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
+                    "Aug","Sep","Oct","Nov","Dec"];
+
+    const dayName = days[now.getDay()];
+    const monthName = months[now.getMonth()];
+    const day = now.getDate();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    const ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    const formatted = `${dayName} ${monthName} ${day}   ${hours}:${minutes} ${ampm}`;
+
+    document.getElementById("datetime").textContent = formatted;
+  }
+
+  // Jalankan saat DOM siap
+  document.addEventListener("DOMContentLoaded", () => {
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  });
+
+
+
+
 //EXPERIENCES 
 const experiences = [
   {

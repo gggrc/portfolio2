@@ -1,57 +1,45 @@
-.navbar {
-  width: 100%;
-  padding: 20px 10%;
-  background: rgba(244, 67, 54, 0.3); /* merah transparan */
-  backdrop-filter: blur(10px); /* efek kaca */
-  -webkit-backdrop-filter: blur(10px); /* support Safari */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  border-bottom: 2px solid #80120a; /* garis merah bawah */
-  border-radius: 0 0 12px 12px; /* opsional biar lebih halus */
+.retro-navbar {
+  position: fixed;          /* biar tetap di atas saat scroll */
+  top: 2%;                /* jarak dari atas layar */
+  left: 50%;                /* patok di tengah */
+  transform: translateX(-50%); /* geser ke tengah */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  background: #f4e9d8;
+  border: 2px solid #222;
+  border-radius: 13px;
+  padding: 10px 12px;
+  font-family: "Courier New", monospace;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #222;
+  box-shadow: 3px 3px 0px #000;
+  z-index: 999;             /* pastikan di atas elemen lain */
 }
 
-.navbar ul {
+/* --- menu kiri --- */
+.nav-right ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end; /* menu rata kanan */
-  align-items: center;
-  gap: 30px;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar ul li a {
+.nav-right li a {
   text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
+  color: #222;
+  transition: 0.2s;
 }
 
-/* Hover underline merah */
-.navbar ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -6px;
-  background: #f44336;
-  transition: width 0.3s ease;
+.nav-right li a:hover {
+  text-decoration: underline;
 }
 
-.navbar ul li a:hover::after {
-  width: 100%;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar ul {
-    gap: 15px;
-  }
-
-  .navbar ul li a {
-    font-size: 14px;
-  }
+/* --- kanan --- */
+.nav-left {
+  white-space: nowrap;
+  font-size: 0.9rem;
 }

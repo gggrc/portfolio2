@@ -1,109 +1,73 @@
-@font-face {
-  font-family: "Strippy";
-  src: url("../fonts/Strippy-Regular.otf") format("opentype");
+.profile-card {
+  width: 85%;
+  height: 78vh;
+  margin: 6% auto;
+  font-family: "Press Start 2P", monospace;
+  background: #e88a9c;
+  border: 4px solid #680c24;         
+  outline: 2px solid #f6b3bc;        
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px #000;
 }
 
-* {
+.card-header {
+  background: #d46b83;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 5px solid #a7435e;
+}
+
+.card-header h2 {
+  font-size: 2.3rem;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom, #0a0000, #330000, #330000, #0a0000);
   color: #fff;
-  height: 100vh;
 }
 
-/* Home Section */
-.home-section {
+.card-body {
+  display: flex;
+  position: relative;
+}
+
+/* kiri */
+.sprite {
+  flex: 0 0 160px;   /* tambah lebar area kiri (default 120px → 160px) */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 10%;
+  padding: 10px;
 }
 
-.home-container {
+.pixel-avatar {
+  width: 450px;         /* perbesar gambar (default 90px → 130px) */
+  image-rendering: pixelated;
+  margin-top: -13%;
+}
+
+/* kanan */
+.info-wrapper {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
+  flex-direction: column;
+  border-left: 5px solid #f6b3bc; /* garis pemisah antara kiri-kanan */
 }
 
-/* Text Content */
-.home-text {
-  max-width: 600px;
+.info {
+  flex: 1;
+  padding: 8% 10%;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
-.home-text .name {
-  font-size: 48px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 10px;
+.card-footer {
+  padding: 2% 2%;
+  text-align: left;
+  border-top: 5px solid #f6b3bc; /* pemisah deskripsi & footer */
+  margin-top: -50px; 
 }
 
-.home-text .subname {
-  font-size: 28px;
-  font-weight: 500;
-  color: #f44336; /* Merah elegan */
-  margin-bottom: 20px;
-}
-
-.home-text .description {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  color: #ddd;
-}
-
-/* Social Icons */
 .social-icons-home a {
-  display: inline-block;
-  margin-right: 15px;
-  padding: 10px 18px;
-  border-radius: 80%;
-  text-decoration: none;
-  background: #621C12;
+  padding: 8% 10%;
   color: #fff;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.social-icons-home a:hover {
-  background: #5a0e02;
-  transform: translateY(-3px);
-}
-
-/* Image */
-.home-image img {
-  width: 320px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0px 0px 30px rgba(244, 67, 54, 0.6);
-  transition: transform 0.3s ease;
-}
-
-.home-image img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .home-container {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .home-text .name {
-    font-size: 38px;
-  }
-
-  .home-text .subname {
-    font-size: 22px;
-  }
-
-  .home-image img {
-    width: 250px;
-  }
+  font-size: 1.8rem;
+  text-decoration: none;
 }

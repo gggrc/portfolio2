@@ -329,89 +329,69 @@ const projects = [
       
 ];
 
-const containerProject = document.getElementById("projects-container");
-function renderProjects() {
-  if (!containerProject) return;
-  containerProject.innerHTML = "";
+let currentIndex = 0;
 
-  projects.forEach((project) => {
-    const card = document.createElement("div");
-    card.className = "project-card";
+const mainImg = document.querySelector(".project-main-box img");
+const mainTitle = document.querySelector(".project-info h3");
+const mainRole = document.querySelector(".project-info .role");
+const mainTech = document.querySelector(".project-info .tech");
+const mainDesc = document.querySelector(".project-info p");
+const mainLinks = document.querySelector(".project-info .links");
 
-    card.innerHTML = `
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}" width="300">
-      <p><strong>Role:</strong> ${project.role}</p>
-      <p><strong>Tech:</strong> ${project.tech}</p>
-      <p>${project.description}</p>
-      <p>
-        <a href="${project.youtube}" target="_blank">Demo</a> | 
-        <a href="${project.github}" target="_blank">GitHub</a>
-      </p>
-    `;
+const thumbsContainer = document.getElementById("projects-thumbs");
+const prevBtn = document.querySelector(".nav-btn.prev");
+const nextBtn = document.querySelector(".nav-btn.next");
 
-    containerProject.appendChild(card);
+// Render main content
+function renderMain(index) {
+  const proj = projects[index];
+  mainImg.src = proj.image;
+  mainImg.alt = proj.title;
+  mainTitle.textContent = proj.title;
+  mainRole.textContent = `Role: ${proj.role}`;
+  mainTech.textContent = `Tech: ${proj.tech}`;
+  mainDesc.textContent = proj.description;
+
+  // Tambah link
+  mainLinks.innerHTML = `
+    <a href="${proj.youtube}" target="_blank">🔗 Demo</a> |
+    <a href="${proj.github}" target="_blank">💻 Code</a>
+  `;
+}
+
+// Render thumbnails
+function renderThumbs() {
+  // Hapus dulu isi lama
+  thumbsContainer.querySelectorAll(".thumb-card").forEach((el) => el.remove());
+
+  projects.forEach((proj, i) => {
+    const thumb = document.createElement("div");
+    thumb.classList.add("thumb-card");
+    const img = document.createElement("img");
+    img.src = proj.image;
+    img.alt = proj.title;
+    thumb.appendChild(img);
+
+    thumb.addEventListener("click", () => {
+      currentIndex = i;
+      renderMain(currentIndex);
+    });
+
+    thumbsContainer.insertBefore(thumb, nextBtn); // sebelum tombol >
   });
 }
-renderProjects();
 
-//Contact 3D Globe
-const globeContainer = document.getElementById("globe-container");
-if (globeContainer) {
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    globeContainer.clientWidth / globeContainer.clientHeight,
-    0.1,
-    1000
-  );
-  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-  renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
-  globeContainer.appendChild(renderer.domElement);
+// Navigasi
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+  renderMain(currentIndex);
+});
 
-  const geometry = new THREE.SphereGeometry(2, 32, 32);
-  const material = new THREE.MeshStandardMaterial({ color: 0x1e40af, wireframe: true });
-  const sphere = new THREE.Mesh(geometry, material);
-  scene.add(sphere);
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  renderMain(currentIndex);
+});
 
-  const light = new THREE.PointLight(0xffffff, 1);
-  light.position.set(5, 5, 5);
-  scene.add(light);
-
-  camera.position.z = 5;
-
-  let targetX = 0,
-    targetY = 0,
-    isHovering = false;
-
-  globeContainer.addEventListener("mouseenter", () => (isHovering = true));
-  globeContainer.addEventListener("mouseleave", () => (isHovering = false));
-
-  globeContainer.addEventListener("mousemove", (event) => {
-    if (!isHovering) return;
-    const rect = globeContainer.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-    const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-    targetX = x * 0.5;
-    targetY = y * 0.5;
-  });
-
-  function animate() {
-    requestAnimationFrame(animate);
-    if (isHovering) {
-      sphere.rotation.y += (targetX - sphere.rotation.y) * 0.05;
-      sphere.rotation.x += (targetY - sphere.rotation.x) * 0.05;
-    } else {
-      sphere.rotation.y += 0.002;
-    }
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener("resize", () => {
-    const size = globeContainer.getBoundingClientRect();
-    camera.aspect = size.width / size.height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(size.width, size.height);
-  });
-}
+// Inisialisasi
+renderMain(currentIndex);
+renderThumbs();

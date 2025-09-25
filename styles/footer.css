@@ -3,6 +3,11 @@
       src: url('../fonts/Mitr-Light.ttf') format('opentype');
     }
 
+    @font-face {
+  font-family: "Game";
+  src: url("../fonts/Early GameBoy.ttf") format("opentype");
+}
+
     /* ===== Footer Utama ===== */
     .footer {
       background-color: #0C160D; /* warna hitam kehijauan */
@@ -27,14 +32,15 @@
       font-weight: bold;
       font-size: 1.5rem;
       margin-bottom: 0.3rem;
-      
+      font-family: "Game";
       letter-spacing: 1px;
     }
 
     .footer-text {
       font-size: 0.8rem;
       margin: 0.1rem 0;
-      font-family: "Mitr", sans-serif;
+      font-family:'Courier New', Courier, monospace;
+      line-height: 1.8;
     }
 
     .footer-right {

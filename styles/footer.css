@@ -39,7 +39,8 @@
     .footer-text {
       font-size: 0.8rem;
       margin: 0.1rem 0;
-      font-family:'Courier New', Courier, monospace;
+      font-family: "SUSE Mono", sans-serif;
+  font-weight: 600;
       line-height: 1.8;
     }
 

@@ -2,8 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #e6f0f2;
+  font-family: "Alan Sans", sans-serif;
   color: #444;
 }
 
@@ -26,7 +25,7 @@ body {
 .project-main-box {
   width: 700px;
   height: 360px;
-  border-radius: 10px;
+  border-radius: 6px;
   background: #fff;
   box-shadow: 
     8px 8px 20px rgba(0,0,0,0.08),
@@ -46,18 +45,22 @@ body {
 
 /* Kotak deskripsi di samping */
 .project-info {
-  max-width: 330px;
+  max-width: 460px;
   text-align: left;
   font-size: 0.9rem;
   line-height: 1.6;
   color: #555;
+  margin-top: 20px;
+  font-family: "SUSE Mono", sans-serif;
+  font-weight: 700;
 }
 
 /* Heading */
 .project-info h3 {
   margin-bottom: 10px;
-  font-size: 1.4rem;
-  color: #e48c84;
+  font-size: 1.7rem;
+  color: #a3052f;
+  font-weight: 900;
 }
 
 /* ===== THUMBNAILS ===== */
@@ -65,14 +68,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  margin-top: 30px;
+  gap: 10px;
+  margin-top: -30px;
 }
 
 .thumb-card {
   width: 120px;
   height: 100px;
-  border-radius: 18px;
+  border-radius: 4px;
   background: #f5fafa;
   box-shadow: 
     6px 6px 12px rgba(0,0,0,0.08),
@@ -80,6 +83,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #000000; 
 }
 
 .thumb-card:hover {
@@ -97,12 +101,46 @@ body {
 
 /* ===== NAVIGATION BUTTONS ===== */
 .nav-btn {
-  font-size: 2rem;
-  color: #888;
+  font-size: 3rem;
+  color: #e48c84;
   cursor: pointer;
   transition: color 0.3s ease;
+  font-weight: 900;
 }
 
 .nav-btn:hover {
-  color: #e48c84;
+  color: #a3052f;
 }
+
+
+.button-wrapper {
+    display: flex;
+    gap: 10px; 
+    margin-top: -10px;
+}
+
+.links {
+    display: inline-block;
+    padding: 0px 20px; 
+    background-color: #ffffff;
+    color: #000000; 
+    font-family: 'Mohave-Regular', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; 
+    text-transform: uppercase;
+    border: 1px solid #000000; 
+    border-radius: 0; 
+    box-shadow: 2px 2px 0px 0px #000000; 
+    margin: 10px; 
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.links:hover {
+    transform: translateY(-2px) translateX(-2px); 
+    box-shadow: 6px 6px 0px 0px #000000;
+}
+

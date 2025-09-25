@@ -354,9 +354,9 @@ function renderMain(index) {
 
   // Tambah link
   mainLinks.innerHTML = `
-    <a href="${proj.youtube}" target="_blank">🔗 Demo</a> |
-    <a href="${proj.github}" target="_blank">💻 Code</a>
-  `;
+    <a href="${proj.youtube}" target="_blank" class="links">Demo</a> 
+    <a href="${proj.github}" target="_blank" class="links">Code</a>
+`;
 }
 
 // Render thumbnails

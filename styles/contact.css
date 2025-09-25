@@ -76,17 +76,17 @@
   justify-content: center;
   width: 40px; /* lingkaran lebih besar */
   height: 40px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  font-size: 18px; /* ukuran icon */
-  color: #fff;
+  border: 2px solid white;
+  border-radius:25%;
+  font-size: 1.2rem; /* ukuran icon */
+  color: white;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .social-icons a:hover {
-  background: #e50914;
-  border-color: #e50914;
+  background: white;
+  color: #621C12;
 }
 
 /* ===== Right Globe ===== */

@@ -1,8 +1,8 @@
 .retro-navbar {
-  position: fixed;          /* biar tetap di atas saat scroll */
-  top: 2%;                /* jarak dari atas layar */
-  left: 50%;                /* patok di tengah */
-  transform: translateX(-50%); /* geser ke tengah */
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,10 +16,14 @@
   font-size: 1.1rem;
   color: #222;
   box-shadow: 3px 3px 0px #000;
-  z-index: 999;             /* pastikan di atas elemen lain */
+  z-index: 999;
 }
 
-/* --- menu kiri --- */
+/* menu kanan */
+.nav-right {
+  position: relative;
+}
+
 .nav-right ul {
   list-style: none;
   display: flex;
@@ -38,8 +42,61 @@
   text-decoration: underline;
 }
 
-/* --- kanan --- */
-.nav-left {
-  white-space: nowrap;
-  font-size: 0.9rem;
+.nav-right li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* menu toggle hidden default */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 992px) {
+  .retro-navbar{
+    font-size: 0.8rem;
+    border-radius: 7px;
+  }
+}
+/* ========= Responsive ========= */
+
+/* Tablet kecil & mobile */
+@media (max-width: 576px) {
+  .retro-navbar{
+    font-size: 0.9rem;
+    border-radius: 7px;
+  }
+  .nav-right ul {
+    display: none; /* sembunyikan menu default */
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background: #f4e9d8;
+    border: 2px solid #222;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 3px 3px 0px #000;
+  }
+
+  .nav-right ul.show {
+    display: flex; /* tampilkan saat toggle */
+  }
+
+  .menu-toggle {
+    display: block; /* tampilkan tombol ☰ */
+  }
+}
+
+@media (max-width: 480px) {
+  .retro-navbar {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  .nav-right ul {
+    width: 150px;
+  }
 }

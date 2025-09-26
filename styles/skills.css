@@ -16,7 +16,7 @@
 /* Kotak utama */
 .tab-content {
   top: 20%;
-  background: #EDC496;
+  background: #f6b3bc;
   padding: 2rem;
   border-radius: 10px;
   border: 2px solid #000;
@@ -89,7 +89,7 @@
 .tab-item {
   font-weight: bold;
   cursor: pointer;
-  color: #5c1e00;
+  color: #a3052f;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   transition: background 0.2s ease;
@@ -108,7 +108,7 @@
   right: 0;
   top: -42px;
   height: calc(100% + 35px);
-  background: #EDC496;
+  background: #f6b3bc;
   border: 3px solid #000;
   border-top: none;
   border-radius: 0 0 12px 12px;

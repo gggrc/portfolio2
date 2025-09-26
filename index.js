@@ -29,7 +29,48 @@ function updateDateTime() {
   });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav-right li a");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.querySelector(".nav-right ul");
 
+  // Klik menu → aktif langsung
+  navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      navLinks.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+      navMenu.classList.remove("show"); // tutup dropdown setelah klik
+    });
+  });
+
+  // Toggle dropdown menu
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // Scroll spy pakai IntersectionObserver
+  const sections = document.querySelectorAll("section[id]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${id}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
 
 //EXPERIENCES 
 const experiences = [

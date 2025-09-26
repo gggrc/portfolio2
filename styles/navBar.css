@@ -22,6 +22,7 @@
 /* menu kanan */
 .nav-right {
   position: relative;
+  font-weight: 300;
 }
 
 .nav-right ul {
@@ -43,7 +44,7 @@
 }
 
 .nav-right li a.active {
-  font-weight: bold;
+  font-weight: 900;
   text-decoration: underline;
 }
 

@@ -24,7 +24,7 @@
 
 .circle-number {
     position: absolute;
-    right: 145px;
+    
     top: -3px;
     background-color: #f4e9d8;
     color: #961336;    
@@ -39,6 +39,7 @@
     justify-content: center;
     box-shadow: 2px 3px 0px 0px #000000; 
     border: 1px solid #000000;
+    left: 0%;
 }
 
 .experiences-label {
@@ -46,13 +47,13 @@
     color: #961336;
     padding: 8px 20px;
     font-weight: bold;
-    margin-left: 100px;
     margin-top: -10px;
     border-radius: 10px;
     font-family: "Game";
     box-shadow: 2px 3px 0px 0px #000000; 
     font-size: 1rem;
     border: 1px solid #000000;
+    margin-left: 0%;
 }
 
 .header-bar {
@@ -111,9 +112,9 @@
     overflow-x: auto;
     gap: 25px;
     padding: 15px;
-    width: 74%;
-    height: 93%;
-    margin-left: 130px;
+    width: 94%;
+    height: 90%;
+    margin-left: 1%;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
@@ -184,113 +185,65 @@
   font-weight: 300;
 }
 
-/* ---------- TABLET ---------- */
-@media (max-width: 991.98px) {
+@media (max-width: 992px){
   .circle-number {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    background: #621C12;
-    color: #EDDA96;
-    font-size: 1rem;
-    font-weight: bold;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .experiences-section {
-    padding: 50px 30px;
-  }
-
-  .experiences-label {
-    margin-left: 40px;
-    font-size: 0.9rem;
-  }
-
-  .header-bar::before {
-    content: "";
-    position: absolute;
-    top: 80%;
-    left: 200px;
-    right: 100px;
-    height: 2px;
-    background-color: #621C12;
-    transform: translateY(-50%);
-    z-index: 0;
-  }
-
-  .header-bar > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .cards-container {
-    width: 90%;
-    margin-left: 30px;
-    height: auto;
-  }
+    left: 5%;
 }
 
-/* ---------- MOBILE ---------- */
-@media (max-width: 576px) {
+.experiences-label {
+    margin-left: -5%;
+}
+.cards-container {
+    width: 100%;
+    margin-left: -3%;
+}
+
+}
+
+
+@media (max-width: 768px){
   .circle-number {
-    position: absolute;
-    right: 15px;
-    top: 35px;
-    background: #621C12;
-    color: #EDDA96;
-    font-size: 1rem;
-    font-weight: bold;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    left: 10%;
+}
 
-  .experiences-section {
-    padding: 30px 15px;
-  }
+.experiences-label {
+    margin-left: -10%;
+}
+.cards-container {
+    width: 100%;
+    margin-left: -4%;
+}
 
-  .experiences-label {
-    margin-left: 0;
-    text-align: center;
-    display: inline-block;
-    font-size: 0.85rem;
-    margin-top: 70px;
-  }
+}
 
-  .header-bar::before {
-    content: "";
-    position: absolute;
-    top: 90%;
-    left: 150px;
-    right: 100px;
-    height: 2px;
-    background-color: #621C12;
-    transform: translateY(-50%);
-    z-index: 0;
-  }
 
-  .header-bar > * {
-    position: relative;
-    z-index: 1;
-  }
+@media (max-width: 576px){
+  .circle-number {
+    left: 20%;
+}
 
-  .cards-container {
-    width: 90%;
-    margin-left: 0;
-    height: auto;
-    gap: 15px;
-  }
+.experiences-label {
+    margin-left: -20%;
+}
+.cards-container {
+    width: 100%;
+    margin-left: -5%;
+}
 
-  .experience-card {
-    flex: 0 0 80%;  /* biar card agak lebar pas mobile */
-    max-width: 320px;
-  }
+}
+
+@media (max-width: 480px){
+  .circle-number {
+    left: 13%;
+}
+
+.experiences-label {
+    margin-left: -13%;
+}
+.cards-container {
+    width: 100%;
+    margin-left: -6%;
+}
+
+
 }

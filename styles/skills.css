@@ -1,30 +1,43 @@
 @font-face {
+  font-family: 'Mohave-Regular';
+  src: url('../fonts/Mohave-Regular.ttf') format('truetype');
+}
+
+@font-face {
   font-family: "Game";
   src: url("../fonts/Early GameBoy.ttf") format("opentype");
 }
 
+.skills-section {
+  padding: 4rem 0;
+  text-align: center;
+  max-height: 100vh;
+  
+  background: radial-gradient(circle at center, #E3A16D 0%, #8a5a34 100%),
+              linear-gradient(45deg, rgba(0,0,0,0.25), transparent 50%),
+              linear-gradient(-45deg, rgba(0,0,0,0.25), transparent 50%);
+  background-blend-mode: multiply;
+}
 
 .skills-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Game";
   height: 100vh;
-  width: 100vw;
 }
 
 /* Kotak utama */
 .tab-content {
-  top: 20%;
-  background: #f6b3bc;
+  top: 100px;
+  background: #EDC496;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 16px;
   border: 2px solid #000;
   box-shadow: 2px 3px 0px #000;
   min-width: 850px;
   min-height: 230px;
   position: relative;
-  margin-bottom: 0;
+  margin-bottom:50px;
 }
 
 /* Grid teknologi */
@@ -37,16 +50,17 @@
 
 .tech-card {
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1rem;
   text-align: center;
   border: 2px solid #000;
   box-shadow: 1px 2px 0px #000;
   width: 110px;
-  height: 150px;
+  height: 130px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
   margin-top: 30px;
+  font-family: "SUSE Mono", sans-serif;
 }
 
 .tech-card:hover {
@@ -62,10 +76,9 @@
 }
 
 .tech-card p {
-  font-size: 1.1rem;
-  font-family: "SUSE Mono", sans-serif;
-  font-weight: 600;
-  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 /* Menu Tab */
@@ -75,23 +88,24 @@
   align-items: center;
   background: #d9d9d9;
   border: 2px solid #000;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 2px 3px 0px #000;
   padding: 0.5rem 6rem;
   position: relative;
   z-index: 1;
   min-width: 730px;
-  margin-top: 10.9%; 
-  font-size: large;
+  margin-top: 80px; 
+  font-size: 1rem;
   flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
+  font-family: 'Game';
 }
 
 .tab-item {
   font-weight: bold;
   cursor: pointer;
-  color: #a3052f;
+  color: #5c1e00;
   padding: 0.5rem 1.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: background 0.2s ease;
   position: relative;
 }
@@ -108,7 +122,7 @@
   right: 0;
   top: -42px;
   height: calc(100% + 35px);
-  background: #f6b3bc;
+  background: #EDC496;
   border: 3px solid #000;
   border-top: none;
   border-radius: 0 0 12px 12px;
@@ -164,7 +178,7 @@
   /* Kotak utama */
   .tab-content {
     top: 50px;
-    background: #f6b3bc;
+    background: #EDC496;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -191,7 +205,7 @@
     border: 2px solid #000;
     box-shadow: 1px 2px 0px #000;
     width: 100px;
-    height: 150px;
+    height: 110px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 30px;
@@ -224,12 +238,12 @@
     border: 2px solid #000;
     border-radius: 12px;
     box-shadow: 2px 3px 0px #000;
-    padding: 0.5rem 6rem;
+    padding: 0.5rem 3rem;
     position: relative;
     z-index: 1;
     min-width: 530px;
     margin-top: 80px; 
-    font-size: large;
+    font-size: 1rem;
     flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
   }
 
@@ -255,7 +269,7 @@
   /* Kotak utama */
   .tab-content {
     top: 50px;
-    background: #f6b3bc;
+    background: #EDC496;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -281,8 +295,8 @@
     text-align: center;
     border: 2px solid #000;
     box-shadow: 1px 2px 0px #000;
-    width: 80px;
-    height: 110px;
+    width: 70px;
+    height: 90px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 25px;
@@ -295,7 +309,7 @@
 
   .tech-card img {
     margin-top: 0px;
-    width: 40px;
+    width: 50px;
     height: 50px;
     object-fit: contain;
   }
@@ -315,12 +329,12 @@
     border: 2px solid #000;
     border-radius: 12px;
     box-shadow: 2px 3px 0px #000;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 0.5rem;
     position: relative;
     z-index: 1;
     min-width: 330px;
     margin-top: 80px; 
-    font-size: medium;
+    font-size: 0.7rem;
     flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
   }
 
@@ -345,13 +359,13 @@
 
   /* Kotak utama */
   .tab-content {
-    top: 0px;
-    background: #f6b3bc;
+    top: 70px;
+    background: #EDC496;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
     box-shadow: 2px 3px 0px #000;
-    min-width: 450px;
+    min-width: 400px;
     min-height: 150px;
     position: relative;
     margin-bottom: 0;
@@ -372,8 +386,8 @@
     text-align: center;
     border: 2px solid #000;
     box-shadow: 1px 2px 0px #000;
-    width: 100px;
-    height: 110px;
+    width: 80px;
+    height: 9cap;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 30px;
@@ -406,13 +420,12 @@
     border: 2px solid #000;
     border-radius: 12px;
     box-shadow: 2px 3px 0px #000;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     position: relative;
     z-index: 1;
     min-width: 130px;
-    margin-top: 30px; 
-    font-size: medium;
-
+    margin-top: 100px; 
+    font-size: 0.7rem;
     flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
   }
 
@@ -420,7 +433,7 @@
     font-weight: bold;
     cursor: pointer;
     color: #5c1e00;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: background 0.2s ease;
     position: relative;
@@ -436,8 +449,8 @@
 
   /* Kotak utama */
   .tab-content {
-    top: 60px;
-    background: #f6b3bc;
+    top: 130px;
+    background: #EDC496;
     padding: 1rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -499,7 +512,7 @@
   position: relative;
   z-index: 1;
   min-width: 330px;       
-  margin-top: 93px;      
+  margin-top: 165px;      
   font-size: 0.8rem;       
   flex-wrap: wrap;        
   gap: 1rem;            

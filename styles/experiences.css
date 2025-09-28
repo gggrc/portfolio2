@@ -85,7 +85,7 @@
 .experiences-section {
     position: relative;
     padding: 86px;
-    height: 68%;
+    height: 73%;
     max-width: 100vw;
     font-family: 'Mohave-Regular', sans-serif;
     overflow: hidden;
@@ -242,7 +242,11 @@
 }
 .cards-container {
     width: 100%;
+    height: 74%;
     margin-left: -6%;
+}
+.cards-container::-webkit-scrollbar {
+  height: 7px;
 }
 
 

@@ -27,6 +27,7 @@ body {
   border-radius: 50%;
   opacity: 0.9;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  z-index: 2; /* DITAMBAHKAN: Z-index lebih tinggi dari .info-wrapper (z-index: 1) */
 }
 
 /* Tambahkan pseudo-element untuk bentuk awan */
@@ -149,7 +150,7 @@ body {
   flex-direction: column;
   border-left: 5px solid #f6b3bc; 
   margin-bottom: 1.4%;/* garis pemisah antara kiri-kanan */
-  z-index: 1;
+  z-index: 1; /* Tetap 1, tapi kini di bawah z-index 2 milik awan */
 }
 
 .info {
@@ -171,6 +172,7 @@ body {
   justify-content: center;    /* icon tetap rata tengah */
   height: auto;               /* jangan pakai 60vh */
   margin: 0;                  /* reset margin absurd */
+  z-index: 10;                /* Naikkan layer agar selalu di atas */
 }
 
 
@@ -332,7 +334,6 @@ body {
     top: -45%;
   }
 }
-
 
 /* Extra small phones (≤480px) */
 @media (max-width: 480px) {

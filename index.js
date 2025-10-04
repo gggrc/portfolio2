@@ -72,6 +72,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navBar = document.querySelector(".retro-navbar");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        if (navBar) {
+            // Jika scroll ke bawah DAN sudah melewati 100px dari atas, sembunyikan
+            if (window.scrollY > lastScrollY && window.scrollY > 100) { 
+                navBar.classList.add("hide");
+            } 
+            // Jika scroll ke atas, tampilkan navbar
+            else if (window.scrollY < lastScrollY) {
+                navBar.classList.remove("hide");
+            }
+            
+            lastScrollY = window.scrollY;
+        }
+    });
+});
+
 //EXPERIENCES 
 const experiences = [
   {
@@ -418,7 +439,8 @@ function renderThumbs() {
       renderMain(currentIndex);
     });
 
-    thumbsContainer.insertBefore(thumb, nextBtn); // sebelum tombol >
+    // PERBAIKAN: Gunakan appendChild karena nextBtn bukan anak dari thumbsContainer
+    thumbsContainer.appendChild(thumb); 
   });
 }
 
@@ -436,3 +458,5 @@ nextBtn.addEventListener("click", () => {
 // Inisialisasi
 renderMain(currentIndex);
 renderThumbs();
+
+

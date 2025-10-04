@@ -17,6 +17,13 @@
   color: #222;
   box-shadow: 3px 3px 0px #000;
   z-index: 999;
+  /* Transisi untuk gerakan mulus */
+  transition: transform 0.3s ease-out, top 0.3s ease-out; 
+}
+
+/* DIKOREKSI: Menggabungkan translateX untuk pemusatan horizontal */
+.retro-navbar.hide {
+  transform: translateX(-50%) translateY(-150%); 
 }
 
 /* menu kanan */
@@ -70,6 +77,11 @@
     font-size: 0.9rem;
     border-radius: 7px;
   }
+  /* DIKOREKSI: Pastikan hide berfungsi di mobile dengan mempertahankan pemusatan */
+  .retro-navbar.hide {
+    transform: translateX(-50%) translateY(-150%);
+  }
+  
   .nav-right ul {
     display: none; /* sembunyikan menu default */
     flex-direction: column;

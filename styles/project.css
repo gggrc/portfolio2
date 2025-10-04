@@ -63,13 +63,23 @@ body {
   font-weight: 900;
 }
 
+/* ===== THUMBNAILS WRAPPER BARU UNTUK CENTERING PANAH ===== */
+.projects-thumbs-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* CENTERING UTAMA: Memusatkan panah secara vertikal */
+  gap: 10px;
+  margin-top: -30px; /* Diambil dari margin-top lama #projects-thumbs */
+}
+
 /* ===== THUMBNAILS ===== */
 #projects-thumbs {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: -30px;
+  margin-top: 0; /* Margin dipindah ke wrapper */
+  flex-wrap: wrap; 
 }
 
 .thumb-card {
@@ -84,6 +94,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid #000000; 
+  flex-shrink: 0; 
 }
 
 .thumb-card:hover {
@@ -106,15 +117,18 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
   font-weight: 900;
+  /* Tambahkan margin agar tidak menempel terlalu rapat ke thumbnail (opsional) */
+  margin: 0 5px; 
 }
 
 .nav-btn:hover {
   color: #a3052f;
 }
 
-
+/* CONTAINER TOMBOL (DIPUSATKAN) */
 .button-wrapper {
     display: flex;
+    justify-content: center; /* PUSATKAN TOMBOL */
     gap: 10px; 
     margin-top: -10px;
 }
@@ -144,3 +158,124 @@ body {
     box-shadow: 6px 6px 0px 0px #000000;
 }
 
+/* -------------------------------------- */
+/* RESPONSIVE CSS                         */
+/* -------------------------------------- */
+
+/* Tablet (Max-width 992px) */
+@media (max-width: 992px) {
+  /* Mengubah tata letak utama menjadi vertikal (kolom) */
+  #projects-main {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; 
+  }
+
+  /* Gambar utama tidak mengecil drastis */
+  .project-main-box {
+    width: 90%; 
+    height: 320px; 
+    margin-top: 10px;
+  }
+
+  /* Kotak deskripsi berada di bawah gambar */
+  .project-info {
+    max-width: 90%;
+    text-align: left; 
+    margin-top: 0;
+    padding: 0 10px; 
+  }
+
+  .project-info h3 {
+    text-align: center; 
+    font-size: 1.5rem;
+  }
+  
+  /* Thumbnails Wrapper */
+  .projects-thumbs-nav-wrapper {
+    margin-top: 10px; 
+  }
+}
+
+/* Mobile / HP (Max-width 576px) */
+@media (max-width: 576px) {
+  #projects {
+    padding: 100px 10px;
+  }
+
+  /* Gambar utama tidak mengecil drastis */
+  .project-main-box {
+    width: 95%;
+    height: 220px; 
+    margin-top: 5px;
+    border-width: 2px;
+  }
+
+  /* Kotak deskripsi */
+  .project-info {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    padding: 0 10px;
+    margin-top: 15px;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Thumbnail Grid: Disesuaikan agar memuat 5 kolom (2 baris total untuk 9 item) */
+  #projects-thumbs {
+    gap: 8px; 
+    /* Lebar tetap 432px menjamin 5 kolom / 2 baris (5*80px + 4*8px) */
+    width: 432px; 
+    max-width: 100%;
+    margin: 0; 
+  }
+
+  .thumb-card {
+    width: 68px; /* Lebar tetap untuk thumbnail */
+    height: 70px;
+    border-width: 1px;
+    box-shadow: 3px 3px 0px #000000;
+  }
+  
+  /* Link buttons */
+  .links {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    box-shadow: 1px 1px 0px 0px #000000;
+  }
+
+  /* Navigation buttons */
+  .nav-btn {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Kecil (Max-width 480px) */
+@media (max-width: 480px) {
+  /* Gambar utama tidak mengecil drastis */
+  #projects {
+    padding: 0px 10px;
+  }
+  .project-main-box {
+    height: 180px; 
+  }
+
+  .project-info {
+    font-size: 0.75rem;
+    margin-top: 10px;
+  }
+  
+  /* Thumbnail Grid */
+  .thumb-card {
+    width: 70px; /* Lebar tetap yang sedikit disesuaikan */
+    height: 60px;
+  }
+  
+  #projects-thumbs {
+      /* Lebar tetap 407px menjamin 5 kolom / 2 baris (5*75px + 4*8px) */
+      width: 407px; 
+      max-width: 100%;
+  }
+}

@@ -449,7 +449,7 @@
 
   /* Kotak utama */
   .tab-content {
-    top: 130px;
+    top: 50px; /* DIKOREKSI: Dari 130px menjadi 50px */
     background: #EDC496;
     padding: 1rem;
     border-radius: 16px;
@@ -512,7 +512,7 @@
   position: relative;
   z-index: 1;
   min-width: 330px;       
-  margin-top: 165px;      
+  margin-top: 80px; /* DIKOREKSI: Dari 165px menjadi 80px */
   font-size: 0.8rem;       
   flex-wrap: wrap;        
   gap: 1rem;            

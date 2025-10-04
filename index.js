@@ -1,33 +1,44 @@
 //navBar
 function updateDateTime() {
-    const now = new Date();
+  const now = new Date();
 
-    const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                    "Aug","Sep","Oct","Nov","Dec"];
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
-    const dayName = days[now.getDay()];
-    const monthName = months[now.getMonth()];
-    const day = now.getDate();
+  const dayName = days[now.getDay()];
+  const monthName = months[now.getMonth()];
+  const day = now.getDate();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    const ampm = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12;
-    hours = hours ? hours : 12;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
 
-    const formatted = `${dayName} ${monthName} ${day}   ${hours}:${minutes} ${ampm}`;
+  const formatted = `${dayName} ${monthName} ${day}   ${hours}:${minutes} ${ampm}`;
 
-    document.getElementById("datetime").textContent = formatted;
-  }
+  document.getElementById("datetime").textContent = formatted;
+}
 
-  // Jalankan saat DOM siap
-  document.addEventListener("DOMContentLoaded", () => {
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-  });
-
+// Jalankan saat DOM siap
+document.addEventListener("DOMContentLoaded", () => {
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-right li a");
@@ -35,9 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector(".nav-right ul");
 
   // Klik menu → aktif langsung
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      navLinks.forEach(l => l.classList.remove("active"));
+      navLinks.forEach((l) => l.classList.remove("active"));
       this.classList.add("active");
       navMenu.classList.remove("show"); // tutup dropdown setelah klik
     });
@@ -64,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.6 }
+    { threshold: 0.6 },
   );
 
   sections.forEach((section) => {
@@ -72,28 +83,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    const navBar = document.querySelector(".retro-navbar");
-    let lastScrollY = window.scrollY;
+  const navBar = document.querySelector(".retro-navbar");
+  let lastScrollY = window.scrollY;
 
-    window.addEventListener("scroll", () => {
-        if (navBar) {
-            // Jika scroll ke bawah DAN sudah melewati 100px dari atas, sembunyikan
-            if (window.scrollY > lastScrollY && window.scrollY > 100) { 
-                navBar.classList.add("hide");
-            } 
-            // Jika scroll ke atas, tampilkan navbar
-            else if (window.scrollY < lastScrollY) {
-                navBar.classList.remove("hide");
-            }
-            
-            lastScrollY = window.scrollY;
-        }
-    });
+  window.addEventListener("scroll", () => {
+    if (navBar) {
+      // Jika scroll ke bawah DAN sudah melewati 100px dari atas, sembunyikan
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        navBar.classList.add("hide");
+      }
+      // Jika scroll ke atas, tampilkan navbar
+      else if (window.scrollY < lastScrollY) {
+        navBar.classList.remove("hide");
+      }
+
+      lastScrollY = window.scrollY;
+    }
+  });
 });
 
-//EXPERIENCES 
+//EXPERIENCES
 const experiences = [
   {
     img: "assets/experiences/LO.jpg",
@@ -264,131 +274,128 @@ const techStacks = {
   ],
 };
 
-const tabs = document.querySelectorAll('.tab-item');
-  const techGrid = document.getElementById('tech-grid');
-  let activeTab = "Backend";
+const tabs = document.querySelectorAll(".tab-item");
+const techGrid = document.getElementById("tech-grid");
+let activeTab = "Backend";
 
-  function renderTech(tab) {
-    techGrid.innerHTML = '';
-    techStacks[tab].forEach(tech => {
-      const card = document.createElement('div');
-      card.className = 'tech-card';
-      card.innerHTML = `
+function renderTech(tab) {
+  techGrid.innerHTML = "";
+  techStacks[tab].forEach((tech) => {
+    const card = document.createElement("div");
+    card.className = "tech-card";
+    card.innerHTML = `
         <img src="${tech.img}" alt="${tech.name}">
         <p>${tech.name}</p>
       `;
-      techGrid.appendChild(card);
-    });
-  }
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      activeTab = tab.dataset.tab;
-      renderTech(activeTab);
-    });
+    techGrid.appendChild(card);
   });
+}
 
-  // Render awal
-  renderTech(activeTab);
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+    activeTab = tab.dataset.tab;
+    renderTech(activeTab);
+  });
+});
+
+// Render awal
+renderTech(activeTab);
 //Project
 const projects = [
   {
-          title: "This Portfolio",
-          description:
-            "A modern portfolio website highlighting my projects, skills, and experiences, designed for responsiveness, smooth animations, and seamless user navigation.",
-          role: "Developer",
-          tech: "CSS, HTML, JS, Node.js",
-          youtube:
-            "https://gggrc.github.io/portfolio2/",
-          image: "assets/projects/ThisPortfolio.png",
-          github:
-            "https://github.com/gggrc/portfolio2",
-        },
-        {
-          title: "Photobooth Website (Ongoing)",
-          description:
-            "An interactive web application that allows users to take, customize, and download their photos directly from the browser. It features real-time camera access, fun filters, and an easy-to-use interface designed for events and personal use. Built with a responsive layout to ensure smooth performance across devices.",
-          role: "UI/UX Designer and Frontend Developer",
-          tech: "Figma, Node.js, Express",
-          youtube:
-            "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
-          image: "assets/projects/Photobooth.jpg",
-          github:
-            "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
-        },
-        {
-          title: "Website Database GKI Karawaci",
-          description:
-            "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
-          role: "Fullstack Developer",
-          tech: "React, TypeScript, Supabase, Next.js, Node.js",
-          youtube: "https://gkikarawaci.vercel.app/",
-          image: "assets/projects/DatabaseGKIKarawaci.png",
-          github: "https://github.com/gggrc/gkikarawaci",
-        },
-        {
-          title: "Portfolio",
-          description:
-            "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
-          role: "Software Developer",
-          tech: "React, CSS, TypeScript",
-          youtube: "https://gracepatricia.vercel.app/",
-          image: "assets/projects/Portfolio.jpg",
-          github: "https://github.com/gggrc/portfolio",
-        },
-        {
-          title: "Prayer Link",
-          description:
-            "PrayerLink is an innovative spiritual app created to strengthen connections through the power of prayer. In a fast-paced world where many feel isolated in their struggles, with PrayerLink, prayer is no longer just a personal act—it becomes a movement of community, linking hearts, hopes, and faith in one platform.",
-          role: "Fullstack Developer",
-          tech: "T3 Stack, Next.js, tRPC, Prisma, Firebase",
-          youtube: "https://youtu.be/YjrGjn3tolU",
-          image: "assets/projects/PrayerLink.jpg",
-          github: "https://github.com/gggrc/ncfiprayer",
-        },
-        {
-          title: "KeyToHatch",
-          description:
-            "KeytoHatch is a simple, fun, and educational Java-based typing game that challenges your typing speed and accuracy. It features a basic GUI using Java Swing and offers three different game modes for players of all skill levels.",
-          role: "UI/UX Designer and Game Developer",
-          tech: "Aseprite and Java",
-          youtube: "https://youtu.be/-HQPywMF3p8",
-          image: "assets/projects/KeyToHatch.jpg",
-          github: "https://github.com/gggrc/KeyToHatch",
-        },
-        {
-          title: "Algorithm Visualizer",
-          description:
-            "An HTML visualizer for sorting, searching, and pathfinding with step-by-step animations, speed controls, and responsive UI for learning and comparison.",
-          role: "Developer",
-          tech: "HTML",
-          youtube: "https://youtu.be/qS6g4z6CGlQ",
-          image: "assets/projects/AlgorithmVisualizer.jpg",
-          github: "https://github.com/gggrc/AlgorithmVisualizer",
-        },
-        {
-          title: "Random Dice",
-          description:
-            "A simple web app that generates random dice rolls with a click, featuring a clean interface and responsive design for quick and easy use.",
-          role: "Developer",
-          tech: "HTML, CSS, JavaScript",
-          youtube: "https://gggrc.github.io/RandomDice/",
-          image: "assets/projects/RandomDice.png",
-          github: "https://github.com/gggrc/RandomDIce",
-        },
-        {
-          title: "Exercise Flexbox",
-          description:
-            "Learning Flexbox by building a responsive webpage layout with HTML and CSS, demonstrating various Flexbox properties and techniques for modern web design.",
-          role: "Developer",
-          tech: "HTML, CSS",
-          youtube: "https://gggrc.github.io/exerciseFlex/",
-          image: "assets/projects/flexBoxExercise.png",
-          github: "https://github.com/gggrc/exerciseFlex",
-        },
-      
+    title: "This Portfolio",
+    description:
+      "A modern portfolio website highlighting my projects, skills, and experiences, designed for responsiveness, smooth animations, and seamless user navigation.",
+    role: "Developer",
+    tech: "CSS, HTML, JS, Node.js",
+    youtube: "https://gggrc.github.io/portfolio2/",
+    image: "assets/projects/ThisPortfolio.png",
+    github: "https://github.com/gggrc/portfolio2",
+  },
+  {
+    title: "Photobooth Website (Ongoing)",
+    description:
+      "An interactive web application that allows users to take, customize, and download their photos directly from the browser. It features real-time camera access, fun filters, and an easy-to-use interface designed for events and personal use. Built with a responsive layout to ensure smooth performance across devices.",
+    role: "UI/UX Designer and Frontend Developer",
+    tech: "Figma, Node.js, Express",
+    youtube:
+      "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
+    image: "assets/projects/Photobooth.jpg",
+    github:
+      "https://www.figma.com/proto/PHlHTfhYNFNdT4Zjfu5b1Z/PROTOTYPE-PHOTOBOOTH?node-id=641-8584&p=f&t=cNClPzZeR1n3pNi0-0&scaling=contain&content-scaling=fixed&page-id=641%3A8366&starting-point-node-id=641%3A8584",
+  },
+  {
+    title: "Website Database GKI Karawaci",
+    description:
+      "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
+    role: "Fullstack Developer",
+    tech: "React, TypeScript, Supabase, Next.js, Node.js",
+    youtube: "https://gkikarawaci.vercel.app/",
+    image: "assets/projects/DatabaseGKIKarawaci.png",
+    github: "https://github.com/gggrc/gkikarawaci",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "A personal portfolio website showcasing experiences, projects, and skills. Built with React and TypeScript, it focuses on responsive design, smooth animations, and intuitive navigation to provide a professional and modern showcase of my work.",
+    role: "Software Developer",
+    tech: "React, CSS, TypeScript",
+    youtube: "https://gracepatricia.vercel.app/",
+    image: "assets/projects/Portfolio.jpg",
+    github: "https://github.com/gggrc/portfolio",
+  },
+  {
+    title: "Prayer Link",
+    description:
+      "PrayerLink is an innovative spiritual app created to strengthen connections through the power of prayer. In a fast-paced world where many feel isolated in their struggles, with PrayerLink, prayer is no longer just a personal act—it becomes a movement of community, linking hearts, hopes, and faith in one platform.",
+    role: "Fullstack Developer",
+    tech: "T3 Stack, Next.js, tRPC, Prisma, Firebase",
+    youtube: "https://youtu.be/YjrGjn3tolU",
+    image: "assets/projects/PrayerLink.jpg",
+    github: "https://github.com/gggrc/ncfiprayer",
+  },
+  {
+    title: "KeyToHatch",
+    description:
+      "KeytoHatch is a simple, fun, and educational Java-based typing game that challenges your typing speed and accuracy. It features a basic GUI using Java Swing and offers three different game modes for players of all skill levels.",
+    role: "UI/UX Designer and Game Developer",
+    tech: "Aseprite and Java",
+    youtube: "https://youtu.be/-HQPywMF3p8",
+    image: "assets/projects/KeyToHatch.jpg",
+    github: "https://github.com/gggrc/KeyToHatch",
+  },
+  {
+    title: "Algorithm Visualizer",
+    description:
+      "An HTML visualizer for sorting, searching, and pathfinding with step-by-step animations, speed controls, and responsive UI for learning and comparison.",
+    role: "Developer",
+    tech: "HTML",
+    youtube: "https://youtu.be/qS6g4z6CGlQ",
+    image: "assets/projects/AlgorithmVisualizer.jpg",
+    github: "https://github.com/gggrc/AlgorithmVisualizer",
+  },
+  {
+    title: "Random Dice",
+    description:
+      "A simple web app that generates random dice rolls with a click, featuring a clean interface and responsive design for quick and easy use.",
+    role: "Developer",
+    tech: "HTML, CSS, JavaScript",
+    youtube: "https://gggrc.github.io/RandomDice/",
+    image: "assets/projects/RandomDice.png",
+    github: "https://github.com/gggrc/RandomDIce",
+  },
+  {
+    title: "Exercise Flexbox",
+    description:
+      "Learning Flexbox by building a responsive webpage layout with HTML and CSS, demonstrating various Flexbox properties and techniques for modern web design.",
+    role: "Developer",
+    tech: "HTML, CSS",
+    youtube: "https://gggrc.github.io/exerciseFlex/",
+    image: "assets/projects/flexBoxExercise.png",
+    github: "https://github.com/gggrc/exerciseFlex",
+  },
 ];
 
 let currentIndex = 0;
@@ -440,7 +447,7 @@ function renderThumbs() {
     });
 
     // PERBAIKAN: Gunakan appendChild karena nextBtn bukan anak dari thumbsContainer
-    thumbsContainer.appendChild(thumb); 
+    thumbsContainer.appendChild(thumb);
   });
 }
 
@@ -458,5 +465,3 @@ nextBtn.addEventListener("click", () => {
 // Inisialisasi
 renderMain(currentIndex);
 renderThumbs();
-
-

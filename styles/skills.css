@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Mohave-Regular';
-  src: url('../fonts/Mohave-Regular.ttf') format('truetype');
+  font-family: "Mohave-Regular";
+  src: url("../fonts/Mohave-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -12,10 +12,11 @@
   padding: 4rem 0;
   text-align: center;
   max-height: 100vh;
-  
-  background: radial-gradient(circle at center, #E3A16D 0%, #8a5a34 100%),
-              linear-gradient(45deg, rgba(0,0,0,0.25), transparent 50%),
-              linear-gradient(-45deg, rgba(0,0,0,0.25), transparent 50%);
+
+  background:
+    radial-gradient(circle at center, #e3a16d 0%, #8a5a34 100%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.25), transparent 50%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.25), transparent 50%);
   background-blend-mode: multiply;
 }
 
@@ -29,7 +30,7 @@
 /* Kotak utama */
 .tab-content {
   top: 100px;
-  background: #EDC496;
+  background: #edc496;
   padding: 2rem;
   border-radius: 16px;
   border: 2px solid #000;
@@ -37,13 +38,13 @@
   min-width: 850px;
   min-height: 230px;
   position: relative;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 /* Grid teknologi */
 .tech-grid {
   display: flex;
-  flex-wrap: wrap;        /* biar otomatis turun ke baris baru */
+  flex-wrap: wrap; /* biar otomatis turun ke baris baru */
   justify-content: center;
   gap: 1.5rem;
 }
@@ -57,7 +58,9 @@
   box-shadow: 1px 2px 0px #000;
   width: 110px;
   height: 130px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   cursor: pointer;
   margin-top: 30px;
   font-family: "SUSE Mono", sans-serif;
@@ -94,10 +97,10 @@
   position: relative;
   z-index: 1;
   min-width: 730px;
-  margin-top: 80px; 
+  margin-top: 80px;
   font-size: 1rem;
   flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
-  font-family: 'Game';
+  font-family: "Game";
 }
 
 .tab-item {
@@ -122,7 +125,7 @@
   right: 0;
   top: -42px;
   height: calc(100% + 35px);
-  background: #EDC496;
+  background: #edc496;
   border: 3px solid #000;
   border-top: none;
   border-radius: 0 0 12px 12px;
@@ -178,7 +181,7 @@
   /* Kotak utama */
   .tab-content {
     top: 50px;
-    background: #EDC496;
+    background: #edc496;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -192,7 +195,7 @@
   /* Grid teknologi */
   .tech-grid {
     display: flex;
-    flex-wrap: wrap;        /* biar otomatis turun ke baris baru */
+    flex-wrap: wrap; /* biar otomatis turun ke baris baru */
     justify-content: center;
     gap: 1.5rem;
   }
@@ -206,7 +209,9 @@
     box-shadow: 1px 2px 0px #000;
     width: 100px;
     height: 110px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 30px;
   }
@@ -242,7 +247,7 @@
     position: relative;
     z-index: 1;
     min-width: 530px;
-    margin-top: 80px; 
+    margin-top: 80px;
     font-size: 1rem;
     flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
   }
@@ -269,7 +274,7 @@
   /* Kotak utama */
   .tab-content {
     top: 50px;
-    background: #EDC496;
+    background: #edc496;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -283,7 +288,7 @@
   /* Grid teknologi */
   .tech-grid {
     display: flex;
-    flex-wrap: wrap;        /* biar otomatis turun ke baris baru */
+    flex-wrap: wrap; /* biar otomatis turun ke baris baru */
     justify-content: center;
     gap: 1.5rem;
   }
@@ -297,7 +302,9 @@
     box-shadow: 1px 2px 0px #000;
     width: 70px;
     height: 90px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 25px;
   }
@@ -333,7 +340,7 @@
     position: relative;
     z-index: 1;
     min-width: 330px;
-    margin-top: 80px; 
+    margin-top: 80px;
     font-size: 0.7rem;
     flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
   }
@@ -349,7 +356,7 @@
   }
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
   .skills-container {
     display: flex;
     flex-direction: column;
@@ -360,7 +367,7 @@
   /* Kotak utama */
   .tab-content {
     top: 70px;
-    background: #EDC496;
+    background: #edc496;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -374,7 +381,7 @@
   /* Grid teknologi */
   .tech-grid {
     display: flex;
-    flex-wrap: wrap;        /* biar otomatis turun ke baris baru */
+    flex-wrap: wrap; /* biar otomatis turun ke baris baru */
     justify-content: center;
     gap: 1rem;
   }
@@ -388,7 +395,9 @@
     box-shadow: 1px 2px 0px #000;
     width: 80px;
     height: 9cap;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 30px;
   }
@@ -424,7 +433,7 @@
     position: relative;
     z-index: 1;
     min-width: 130px;
-    margin-top: 100px; 
+    margin-top: 100px;
     font-size: 0.7rem;
     flex-wrap: wrap; /* biar bisa turun baris kalau sempit */
   }
@@ -440,7 +449,7 @@
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .skills-container {
     display: flex;
     flex-direction: column;
@@ -450,7 +459,7 @@
   /* Kotak utama */
   .tab-content {
     top: 50px; /* DIKOREKSI: Dari 130px menjadi 50px */
-    background: #EDC496;
+    background: #edc496;
     padding: 1rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -463,7 +472,7 @@
   /* Grid teknologi */
   .tech-grid {
     display: flex;
-    flex-wrap: wrap;        /* biar otomatis turun ke baris baru */
+    flex-wrap: wrap; /* biar otomatis turun ke baris baru */
     justify-content: center;
     gap: 1rem;
   }
@@ -477,7 +486,9 @@
     box-shadow: 1px 2px 0px #000;
     width: 100px;
     height: 130px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
     cursor: pointer;
     margin-top: 10px;
   }
@@ -500,33 +511,32 @@
     margin-top: 0.5rem;
   }
 
-.tab-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #d9d9d9;
-  border: 2px solid #000;
-  border-radius: 12px;
-  box-shadow: 2px 3px 0px #000;
-  padding: 0.25rem 1.5rem;   
-  position: relative;
-  z-index: 1;
-  min-width: 330px;       
-  margin-top: 80px; /* DIKOREKSI: Dari 165px menjadi 80px */
-  font-size: 0.8rem;       
-  flex-wrap: wrap;        
-  gap: 1rem;            
-}
+  .tab-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d9d9d9;
+    border: 2px solid #000;
+    border-radius: 12px;
+    box-shadow: 2px 3px 0px #000;
+    padding: 0.25rem 1.5rem;
+    position: relative;
+    z-index: 1;
+    min-width: 330px;
+    margin-top: 80px; /* DIKOREKSI: Dari 165px menjadi 80px */
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-.tab-item {
-  font-weight: bold;
-  font-size: 0.75rem;       
-  cursor: pointer;
-  color: #5c1e00;
-  padding: 0.25rem 0.5rem;  
-  border-radius: 6px;
-  transition: background 0.2s ease;
-  position: relative;
-}
-
+  .tab-item {
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #5c1e00;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    position: relative;
+  }
 }

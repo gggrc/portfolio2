@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Mohave-Regular';
+  font-family: "Mohave-Regular";
   /* Asumsi path font sudah benar di ../fonts/Mohave-Regular.ttf */
-  src: url('../fonts/Mohave-Regular.ttf') format('truetype');
+  src: url("../fonts/Mohave-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Mitr';
+  font-family: "Mitr";
   /* Asumsi path font sudah benar di ../fonts/Mitr-Light.ttf */
-  src: url('../fonts/Mitr-Light.ttf') format('opentype');
+  src: url("../fonts/Mitr-Light.ttf") format("opentype");
 }
 
 @font-face {
@@ -15,108 +15,110 @@
   src: url("../fonts/Early GameBoy.ttf") format("opentype");
 }
 /* --- Body dan Wrapper Utama --- */
-.body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .circle-number {
-    position: absolute;
-    
-    top: -3px;
-    background-color: #f4e9d8;
-    color: #961336;    
-    font-size: 1rem;
-    font-weight: bold;
-    width: 45px;
-    height: 35px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    font-family: "Game";
-    justify-content: center;
-    box-shadow: 2px 3px 0px 0px #000000; 
-    border: 1px solid #000000;
-    left: 0%;
+  position: absolute;
+
+  top: -3px;
+  background-color: #f4e9d8;
+  color: #961336;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 45px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Game";
+  justify-content: center;
+  box-shadow: 2px 3px 0px 0px #000000;
+  border: 1px solid #000000;
+  left: 0%;
 }
 
 .experiences-label {
-    background-color: #f4e9d8;
-    color: #961336;
-    padding: 8px 20px;
-    font-weight: bold;
-    margin-top: -10px;
-    border-radius: 10px;
-    font-family: "Game";
-    box-shadow: 2px 3px 0px 0px #000000; 
-    font-size: 1rem;
-    border: 1px solid #000000;
-    margin-left: 0%;
+  background-color: #f4e9d8;
+  color: #961336;
+  padding: 8px 20px;
+  font-weight: bold;
+  margin-top: -10px;
+  border-radius: 10px;
+  font-family: "Game";
+  box-shadow: 2px 3px 0px 0px #000000;
+  font-size: 1rem;
+  border: 1px solid #000000;
+  margin-left: 0%;
 }
 
 .header-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 .header-bar::before {
-    content: "";
-    position: absolute;
-    top: 80%;
-    left: 360px;
-    right: 240px;
-    height: 2px;
-    background-color: #621C12;
-    transform: translateY(-50%);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 360px;
+  right: 240px;
+  height: 2px;
+  background-color: #621c12;
+  transform: translateY(-50%);
+  z-index: 0;
 }
 
 .header-bar > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Menambahkan Grid Latar Belakang */
 .experiences-section {
-    position: relative;
-    padding: 86px;
-    height: 73%;
-    max-width: 100vw;
-    font-family: 'Mohave-Regular', sans-serif;
-    overflow: hidden;
+  position: relative;
+  padding: 86px;
+  height: 73%;
+  max-width: 100vw;
+  font-family: "Mohave-Regular", sans-serif;
+  overflow: hidden;
 }
 
 .experiences-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    pointer-events: none;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .experiences-section > * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
-
 
 /* cards container tetap scroll horizontal */
 .cards-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 25px;
-    padding: 15px;
-    width: 94%;
-    height: 90%;
-    margin-left: 1%;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 25px;
+  padding: 15px;
+  width: 94%;
+  height: 90%;
+  margin-left: 1%;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards-container::-webkit-scrollbar {
@@ -126,7 +128,7 @@
 .cards-container::-webkit-scrollbar-thumb {
   background: #ffb6c2;
   border-radius: 3px;
-  border: 1.5px solid #000000; 
+  border: 1.5px solid #000000;
 }
 
 .experience-card {
@@ -135,19 +137,22 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 220px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease;
   cursor: pointer;
-  border: 3px solid #000000; 
+  border: 3px solid #000000;
 }
 
 .experience-card:hover {
-    /* Geser sedikit ke atas dan kiri untuk efek menonjol */
-    transform: translateY(-5px) translateX(-5px); 
-    
-    /* Shadow diperkuat saat hover */
-    box-shadow: 5px 5px 0px 0px #000000; 
-    
-    border: 5px solid #000000;
+  /* Geser sedikit ke atas dan kiri untuk efek menonjol */
+  transform: translateY(-5px) translateX(-5px);
+
+  /* Shadow diperkuat saat hover */
+  box-shadow: 5px 5px 0px 0px #000000;
+
+  border: 5px solid #000000;
 }
 
 .card-image {
@@ -165,7 +170,7 @@
   margin-top: -10px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #621C12;
+  color: #621c12;
   margin-bottom: 5px;
 }
 
@@ -173,7 +178,7 @@
   font-size: 0.7rem;
   color: #000000;
   margin-bottom: 10px;
-  font-family: 'Mitr', sans-serif;
+  font-family: "Mitr", sans-serif;
   font-weight: 100;
   line-height: 1.2;
 }
@@ -185,69 +190,62 @@
   font-weight: 300;
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
   .circle-number {
     left: 5%;
-}
+  }
 
-.experiences-label {
+  .experiences-label {
     margin-left: -5%;
-}
-.cards-container {
+  }
+  .cards-container {
     width: 100%;
     margin-left: -3%;
+  }
 }
 
-}
-
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .circle-number {
     left: 10%;
-}
+  }
 
-.experiences-label {
+  .experiences-label {
     margin-left: -10%;
-}
-.cards-container {
+  }
+  .cards-container {
     width: 100%;
     margin-left: -4%;
+  }
 }
 
-}
-
-
-@media (max-width: 576px){
+@media (max-width: 576px) {
   .circle-number {
     left: 20%;
-}
+  }
 
-.experiences-label {
+  .experiences-label {
     margin-left: -20%;
-}
-.cards-container {
+  }
+  .cards-container {
     width: 100%;
     margin-left: -5%;
+  }
 }
 
-}
-
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .circle-number {
     left: 13%;
-}
+  }
 
-.experiences-label {
+  .experiences-label {
     margin-left: -13%;
-}
-.cards-container {
+  }
+  .cards-container {
     width: 100%;
     height: 74%;
     margin-left: -6%;
-}
-.cards-container::-webkit-scrollbar {
-  height: 7px;
-}
-
-
+  }
+  .cards-container::-webkit-scrollbar {
+    height: 7px;
+  }
 }

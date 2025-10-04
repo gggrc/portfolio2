@@ -1,98 +1,97 @@
-@font-face {
-  font-family: "Mitr";
-  src: url("../fonts/Mitr-Light.ttf") format("opentype");
-}
+    @font-face {
+      font-family: 'Mitr';
+      src: url('../fonts/Mitr-Light.ttf') format('opentype');
+    }
 
-@font-face {
+    @font-face {
   font-family: "Game";
   src: url("../fonts/Early GameBoy.ttf") format("opentype");
 }
 
-/* ===== Footer Utama ===== */
-.footer {
-  background-color: #0c160d; /* warna hitam kehijauan */
-  border-top: 3px solid #edda96; /* garis tipis kuning pastel */
-  padding: 1.5rem 6rem;
-  color: #edda96;
-}
+    .footer {
+      background-color: #0C160D; 
+      border-top: 3px solid #EDDA96; 
+      padding: 1.5rem 6rem;
+      color: #EDDA96;
+    }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-.footer-left {
-  max-width: 70%;
-}
+    .footer-left {
+      max-width: 70%;
+    }
 
-.footer-title {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
-  font-family: "Game";
-  letter-spacing: 1px;
-}
+    .footer-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+      font-family: "Game";
+      letter-spacing: 1px;
+    }
 
-.footer-text {
-  font-size: 0.8rem;
-  margin: 0.1rem 0;
-  font-family: "SUSE Mono", sans-serif;
+    .footer-text {
+      font-size: 0.8rem;
+      margin: 0.1rem 0;
+      font-family: "SUSE Mono", sans-serif;
   font-weight: 600;
-  line-height: 1.8;
-}
+      line-height: 1.8;
+    }
 
-.footer-right {
-  display: flex;
-  gap: 1rem;
-}
+    .footer-right {
+      display: flex;
+      gap: 1rem;
+    }
 
-.icon-circle-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25%;
-  width: 40px;
-  height: 40px;
-  color: #edda96;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  border: 1px solid #edda96;
-}
+    .icon-circle-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25%;
+      width: 40px;
+      height: 40px;
+      color: #EDDA96;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid #EDDA96;  
+      
+    }
 
-.icon-circle-footer i {
-  font-size: 1.2rem;
-}
+    .icon-circle-footer i {
+      font-size: 1.2rem;
+    }
 
-.icon-circle-footer:hover {
-  transform: translateY(-2px) translateX(-2px);
-  color: #edda96;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  border: 1px solid #edda96;
-  box-shadow: 2px 2px 0px #edda96;
-}
+    .icon-circle-footer:hover {
+      transform: translateY(-2px) translateX(-2px); 
+      color: #EDDA96;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid #EDDA96;  
+      box-shadow: 2px 2px 0px #EDDA96;
+    }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .footer {
-    padding: 1.5rem 2rem;
-    text-align: center;
-  }
+    @media (max-width: 768px) {
+      .footer {
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
 
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .footer-left {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
+      .footer-left {
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
 
-  .footer-right {
-    justify-content: center;
-  }
-}
+      .footer-right {
+        justify-content: center;
+      }
+    }

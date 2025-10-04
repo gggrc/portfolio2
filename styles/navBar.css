@@ -17,18 +17,14 @@
   color: #222;
   box-shadow: 3px 3px 0px #000;
   z-index: 999;
-  /* Transisi untuk gerakan mulus */
-  transition:
-    transform 0.3s ease-out,
-    top 0.3s ease-out;
+  transition: transform 0.3s ease-out, top 0.3s ease-out; 
 }
 
-/* DIKOREKSI: Menggabungkan translateX untuk pemusatan horizontal */
 .retro-navbar.hide {
-  transform: translateX(-50%) translateY(-150%);
+  transform: translateX(-50%) translateY(-150%); 
 }
 
-/* menu kanan */
+
 .nav-right {
   position: relative;
   font-weight: 300;
@@ -57,7 +53,6 @@
   text-decoration: underline;
 }
 
-/* menu toggle hidden default */
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -66,26 +61,23 @@
 }
 
 @media (max-width: 992px) {
-  .retro-navbar {
+  .retro-navbar{
     font-size: 0.8rem;
     border-radius: 7px;
   }
 }
-/* ========= Responsive ========= */
 
-/* Tablet kecil & mobile */
 @media (max-width: 576px) {
-  .retro-navbar {
+  .retro-navbar{
     font-size: 0.9rem;
     border-radius: 7px;
   }
-  /* DIKOREKSI: Pastikan hide berfungsi di mobile dengan mempertahankan pemusatan */
   .retro-navbar.hide {
     transform: translateX(-50%) translateY(-150%);
   }
-
+  
   .nav-right ul {
-    display: none; /* sembunyikan menu default */
+    display: none; 
     flex-direction: column;
     position: absolute;
     right: 0;
@@ -98,11 +90,11 @@
   }
 
   .nav-right ul.show {
-    display: flex; /* tampilkan saat toggle */
+    display: flex;
   }
 
   .menu-toggle {
-    display: block; /* tampilkan tombol ☰ */
+    display: block; 
   }
 }
 

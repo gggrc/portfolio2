@@ -1,21 +1,20 @@
 {
   "name": "portfolio2",
   "version": "1.0.0",
-  "description": "Welcome to my portfolio repository!   This website was created using **HTML + CSS + JavaScript** to showcase my **experiences, projects, and skills** as an Informatics student passionate about **technology, design, and software development**.",
-  "keywords": [],
-  "homepage": "https://github.com/gggrc/portfolio2#readme",
-  "bugs": {
-    "url": "https://github.com/gggrc/portfolio2/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gggrc/portfolio2.git"
-  },
-  "license": "ISC",
+  "description": "Welcome to my portfolio repository! This website was created using HTML, CSS, and JavaScript to showcase my experiences, projects, and skills as an Informatics student passionate about technology, design, and software development.",
   "author": "Bedul",
+  "license": "ISC",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gggrc/portfolio2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gggrc/portfolio2/issues"
+  },
+  "homepage": "https://github.com/gggrc/portfolio2#readme"
 }

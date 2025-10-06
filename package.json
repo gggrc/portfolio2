@@ -17,10 +17,5 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "next": "^15.5.3",
-    "react": "^19.1.1"
-  },
-  "devDependencies": {}
+  }
 }

@@ -7,7 +7,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "build": "echo 'No build step required for static site'" 
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/gggrc/portfolio2/issues"
   },
-  "homepage": "https://github.com/gggrc/portfolio2#readme"
+  "homepage": "https://github.com/gggrc/portfolio2#readme",
+ 
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
 }

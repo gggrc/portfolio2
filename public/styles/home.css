@@ -134,9 +134,9 @@ body {
 }
 
 .pixel-avatar {
-  width: 450px;        
+  width: 650px;        
   image-rendering: pixelated;
-  margin-top: -14%;
+  margin-top: -10%;
 }
 
 /* kanan */
@@ -153,7 +153,7 @@ body {
 .info {
   flex: 1;
   padding: 6% 10%;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   color: black;
 }

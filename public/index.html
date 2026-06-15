@@ -4,16 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grace Patricia Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Libertinus+Keyboard&family=Limelight&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./styles/navBar.css" />
     <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/experiences.css" />
@@ -23,139 +17,99 @@
     <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
-    <nav class="retro-navbar">
-  <div class="nav-left" id="datetime"></div>
-
-  <div class="nav-right">
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#experiences">Experiences</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
-  </div>
-  </div>
-</nav>
-
-
-<section id="home" class="profile-card">
-  <div class="cloud cloud1">
-    <div></div>
-    <div></div>
-  </div>
-  <div class="cloud cloud2">
-    <div></div>
-    <div></div>
-  </div>
-  <div class="cloud cloud3">
-    <div></div>
-    <div></div>
-  </div>
-  <div class="cloud cloud4">
-    <div></div>
-    <div></div>
-  </div>
-
-  <div class="card-header">
-    <h2>I AM GRACE PATRICIA ANANTA</h2>
-  </div>
-
-  <div class="card-body">
-    <div class="sprite">
-      <img src="assets/grace1.png" alt="Grace Patricia" class="pixel-avatar" />
-    </div>
-
-    <div class="info-wrapper">
-      <div class="info">
-        <p>
-          A dedicated and detail-oriented Informatics student at Universitas
-          Pelita Harapan, passionate about technology, design, and creating
-          impactful solutions through innovation and collaboration.
-        </p>
-      </div>
-      </div>
-      
-        <div class="social-icons-home">
-          <a href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/gggrc" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.instagram.com/grcc.ceee/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-      
     
-  </div>
-</section>
+    <nav class="retro-navbar">
+      <div class="nav-left" id="datetime"></div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </div>
+    </nav>
+
+    <section id="home" class="profile-card">
+      <div class="cloud cloud1"><div></div><div></div></div>
+      <div class="cloud cloud2"><div></div><div></div></div>
+      <div class="cloud cloud3"><div></div><div></div></div>
+      <div class="cloud cloud4"><div></div><div></div></div>
+
+      <div class="card-header">
+        <h2>I AM GRACE PATRICIA ANANTA</h2>
+      </div>
+
+      <div class="card-body">
+        <div class="sprite">
+          <img src="assets/grace1.png" alt="Grace Patricia" class="pixel-avatar" />
+        </div>
+        <div class="info-wrapper">
+          <div class="info">
+            <p>
+              A dedicated and detail-oriented Informatics student at Universitas Pelita Harapan, passionate about technology, design, and creating impactful solutions through innovation and collaboration.
+            </p>
+          </div>
+        </div>
+        <div class="social-icons-home">
+          <a href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/gggrc" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/grcc.ceee/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
 
     <section id="experiences" class="experiences-section">
-        <div class="header-bar">
-          <span class="experiences-label">EXPERIENCES</span>
-          <div class="circle-number" id="experience-count">0</div>
-        </div>
-        <div class="cards-container" id="cards-container"></div>
-      </section>
-
-    
-    <section id="skills">
-  <div class="skills-container">
-    <div class="tab-content">
-      <div class="tech-grid" id="tech-grid">
+      <div class="header-bar">
+        <span class="experiences-label">EXPERIENCES</span>
+        <div class="circle-number" id="experience-count">0</div>
       </div>
-    </div>
-    <div class="tab-menu">
-      <div class="tab-item active" data-tab="Backend">Backend</div>
-      <div class="tab-item" data-tab="Frontend">Frontend</div>
-      <div class="tab-item" data-tab="Design">Design</div>
-      <div class="tab-item" data-tab="Others">Others</div>
-    </div>
-  </div>
-</section>
+      <div class="cards-container" id="cards-container"></div>
+    </section>
 
+    <section id="skills">
+      <div class="skills-container">
+        <div class="tab-content">
+          <div class="tech-grid" id="tech-grid"></div>
+        </div>
+        <div class="tab-menu">
+          <div class="tab-item active" data-tab="Backend">Backend</div>
+          <div class="tab-item" data-tab="Frontend">Frontend</div>
+          <div class="tab-item" data-tab="Design">Design</div>
+          <div class="tab-item" data-tab="Others">Others</div>
+        </div>
+      </div>
+    </section>
 
     <section id="projects">
-  <div id="projects-main">
-    <div class="project-main-box">
-      <img src="" alt="Main Project">
-    </div>
-    <div class="project-info">
-      <h3></h3>
-      <div class="role"></div>
-      <div class="tech"></div>
-      <p></p>
-      <div class="button-wrapper">
-        <div class="links" style="margin-top:10px;"></div>
+      <div id="projects-main">
+        <div class="project-main-box">
+          <img src="" alt="Main Project">
+        </div>
+        <div class="project-info">
+          <h3></h3>
+          <div class="role"></div>
+          <div class="tech"></div>
+          <p></p>
+          <div class="button-wrapper">
+            <div class="links" style="margin-top:10px;"></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="projects-thumbs-nav-wrapper">
-    
-    <i class="fa-solid fa-chevron-left nav-btn prev"></i>
-    
-    <div id="projects-thumbs">
+      <div class="projects-thumbs-nav-wrapper">
+        <i class="fa-solid fa-chevron-left nav-btn prev"></i>
+        <div id="projects-thumbs"></div>
+        <i class="fa-solid fa-chevron-right nav-btn next"></i>
       </div>
-    
-    <i class="fa-solid fa-chevron-right nav-btn next"></i>
-    
-  </div>
-</section>
-
-
+    </section>
 
     <section id="contact" class="contact-section">
       <div class="contact-container">
         <div class="contact-info-box">
           <h4 class="contact-subtitle">GET IN TOUCH</h4>
           <h2 class="contact-title">Contact.</h2>
-
           <div class="contact-info">
             <div class="contact-item">
               <span class="contact-label">Email</span>
@@ -166,25 +120,13 @@
               <p class="contact-text">Banten, Indonesia</p>
             </div>
           </div>
-
           <p class="contact-with-me">Contact with me:</p>
           <div class="social-icons">
-            <a
-              href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/"
-              target="_blank"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/gggrc" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/grcc.ceee/" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
+            <a href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/gggrc" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/grcc.ceee/" target="_blank"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-
-        
       </div>
     </section>
 
@@ -192,41 +134,18 @@
       <div class="footer-content">
         <div class="footer-left">
           <h3 class="footer-title">Grace Patricia A.</h3>
-          <p class="footer-text">
-            © 2025 Grace Patricia Ananta. All rights reserved.
-          </p>
-          <p class="footer-text">
-            Website design inspired by Pinterest and all content within was
-            created by me.
-          </p>
+          <p class="footer-text">© 2025 Grace Patricia Ananta. All rights reserved.</p>
+          <p class="footer-text">Website design inspired by Pinterest and all content within was created by me.</p>
         </div>
-
         <div class="footer-right">
-          <a
-            href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/"
-            target="_blank"
-            class="icon-circle-footer"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="https://github.com/gggrc"
-            target="_blank"
-            class="icon-circle-footer"
-          >
-            <i class="fab fa-github"></i>
-          </a
-          ><a
-            href="https://www.instagram.com/grcc.ceee/"
-            target="_blank"
-            class="icon-circle-footer"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
+          <a href="https://www.linkedin.com/in/grace-patricia-ananta-6700b7243/" target="_blank" class="icon-circle-footer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/gggrc" target="_blank" class="icon-circle-footer"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/grcc.ceee/" target="_blank" class="icon-circle-footer"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </footer>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

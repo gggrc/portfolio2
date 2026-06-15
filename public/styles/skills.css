@@ -28,7 +28,7 @@
 
 
 .tab-content {
-  top: 100px;
+  top: 250px;
   background: #EDC496;
   padding: 2rem;
   border-radius: 16px;
@@ -37,7 +37,7 @@
   min-width: 850px;
   min-height: 230px;
   position: relative;
-  margin-bottom:50px;
+  margin-bottom:200px;
 }
 
 
